@@ -4,7 +4,7 @@ import HeroSection from "@/components/HeroSection";
 import IndustriesSection from "@/components/IndustriesSection";
 import ProductsSection from "@/components/ProductsSection";
 import ServicesSection from "@/components/ServicesSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
+import TestimonialsSectionLoader from "@/components/TestimonialsSectionLoader";
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
       <ServicesSection />
       <ProductsSection />
       <IndustriesSection />
-      <TestimonialsSection />
+      <TestimonialsSectionLoader />
       <ContactSection />
     </div>
   );
