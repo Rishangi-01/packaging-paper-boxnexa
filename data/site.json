@@ -1,0 +1,2856 @@
+{
+  "Insurance": {
+    "templateComponents": {
+      "template-1": {
+        "shared": {
+          "Site": "InsuranceSite1",
+          "Header": "InsuranceHeader1",
+          "Footer": "InsuranceFooter1"
+        },
+        "pages": {
+          "home": {
+            "components": [
+              {
+                "key": "Hero",
+                "component": "InsuranceHero1"
+              },
+              {
+                "key": "Highlights",
+                "component": "InsuranceHighlights1"
+              },
+              {
+                "key": "About",
+                "component": "InsuranceAbout1"
+              },
+              {
+                "key": "Plans",
+                "component": "InsurancePlans1"
+              },
+              {
+                "key": "Process",
+                "component": "InsuranceProcess1"
+              },
+              {
+                "key": "Stats",
+                "component": "InsuranceStats1"
+              },
+              {
+                "key": "Testimonials",
+                "component": "InsuranceTestimonials1"
+              },
+              {
+                "key": "Cta",
+                "component": "InsuranceCta1"
+              },
+              {
+                "key": "Blog",
+                "component": "InsuranceBlog1"
+              }
+            ]
+          },
+          "about-us": {
+            "components": [
+              {
+                "key": "About",
+                "component": "InsuranceAbout1"
+              },
+              {
+                "key": "Stats",
+                "component": "InsuranceStats1"
+              },
+              {
+                "key": "WhyChooseUs",
+                "component": "InsuranceWhyChooseUs1"
+              }
+            ]
+          },
+          "insurance-plans": {
+            "components": [
+              {
+                "key": "Plans",
+                "component": "InsurancePlans1"
+              }
+            ]
+          },
+          "insurance-plan-detail": {
+            "expand": "items",
+            "components": [
+              {
+                "key": "PlanDetail",
+                "component": "InsurancePlanDetail1"
+              },
+              {
+                "key": "EnquiryForm",
+                "component": "InsuranceEnquiryForm1"
+              }
+            ]
+          },
+          "blogs": {
+            "components": [
+              {
+                "key": "Blog",
+                "component": "InsuranceBlog1"
+              }
+            ]
+          },
+          "blog-detail": {
+            "expand": "items",
+            "components": [
+              {
+                "key": "BlogDetail",
+                "component": "InsuranceBlogDetail1"
+              }
+            ]
+          },
+          "contact-us": {
+            "components": [
+              {
+                "key": "ContactPage",
+                "component": "InsuranceContactPage1"
+              },
+              {
+                "key": "EnquiryForm",
+                "component": "InsuranceEnquiryForm1"
+              }
+            ]
+          },
+          "enquire-now": {
+            "components": [
+              {
+                "key": "EnquirePage",
+                "component": "InsuranceEnquirePage1"
+              },
+              {
+                "key": "EnquiryForm",
+                "component": "InsuranceEnquiryForm1"
+              }
+            ]
+          },
+          "thank-you": {
+            "components": [
+              {
+                "key": "ThankYouPage",
+                "component": "InsuranceThankYouPage1"
+              }
+            ]
+          },
+          "faq": {
+            "components": [
+              {
+                "key": "FaqPage",
+                "component": "InsuranceFaqPage1"
+              }
+            ]
+          },
+          "privacy-policy": {
+            "components": [
+              {
+                "key": "PolicyPages",
+                "component": "InsurancePolicyPages1"
+              }
+            ]
+          },
+          "terms-and-conditions": {
+            "components": [
+              {
+                "key": "PolicyPages",
+                "component": "InsurancePolicyPages1"
+              }
+            ]
+          },
+          "cookie-policy": {
+            "components": [
+              {
+                "key": "PolicyPages",
+                "component": "InsurancePolicyPages1"
+              }
+            ]
+          },
+          "sitemap": {
+            "components": [
+              {
+                "key": "SitemapPage",
+                "component": "InsuranceSitemapPage1"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "commerce": {
+      "productDetails": {
+        "hero": {
+          "breadcrumbLabel": "Breadcrumb",
+          "image": {
+            "src": "/images/corrugated-packaging.webp",
+            "alt": "BOXNEXA Corrugated Boxes and Packaging"
+          },
+          "heading": "Product Detail",
+          "homeLabel": "Home",
+          "homeHref": "/",
+          "currentLabel": "Product Detail"
+        },
+        "product": {
+          "name": "Heavy-Duty Corrugated Box",
+          "price": 25,
+          "rating": 4.9,
+          "reviews": 48,
+          "description": "Durable and reliable corrugated boxes engineered for safe and efficient shipping across diverse industries. Built with high-strength kraft linerboard to protect your products against impact and stacking pressure.",
+          "enquiryNow": {
+            "label": "Get a Quote",
+            "href": "#contact"
+          },
+          "features": [
+            {
+              "label": "Heavy-Duty Flute",
+              "icon": "box"
+            },
+            {
+              "label": "100% Recyclable",
+              "icon": "leaf"
+            },
+            {
+              "label": "Custom Sizing",
+              "icon": "layers"
+            },
+            {
+              "label": "High Burst Strength",
+              "icon": "shield"
+            }
+          ],
+          "sizes": [
+            "Small",
+            "Medium",
+            "Large",
+            "XL",
+            "Custom"
+          ],
+          "initialSize": "Medium",
+          "images": [
+            {
+              "src": "/images/corrugated-boxes.webp",
+              "alt": "Heavy-duty corrugated box"
+            },
+            {
+              "src": "/images/corrugated-packaging.webp",
+              "alt": "Corrugated packaging boxes"
+            },
+            {
+              "src": "/images/custom-packaging.webp",
+              "alt": "Custom corrugated box packaging"
+            }
+          ]
+        },
+        "copy": {
+          "collection": "Packaging Products",
+          "reviews": "{count} reviews",
+          "ratingAria": "Rated {rating} out of 5",
+          "selectSize": "Select Box Size",
+          "sizeGuide": "Size Guide",
+          "quantity": "Quantity",
+          "decreaseQuantity": "Decrease quantity",
+          "increaseQuantity": "Increase quantity",
+          "addToCart": "Request Quote",
+          "addedToCart": "Quote Requested",
+          "addToWishlist": "Save Product",
+          "addedToWishlist": "Product Saved",
+          "removeFromWishlist": "Remove product",
+          "addProductToWishlist": "Save to list",
+          "addedConfirmation": "Added to quote request",
+          "cartCount": "Enquiry items: {count}",
+          "dismissConfirmation": "Dismiss confirmation",
+          "previousImage": "Previous product image",
+          "nextImage": "Next product image",
+          "viewImage": "View image {index}",
+          "findFit": "Find your custom size",
+          "sizeGuideTitle": "Packaging Dimensions Guide",
+          "closeSizeGuide": "Close dimensions guide",
+          "sizeGuideDescription": "Select standard dimensions or request custom dimensions tailored to your product specifications.",
+          "sizeColumn": "Size",
+          "fitColumn": "Fit",
+          "selectedSize": "Currently selected",
+          "availableSize": "Available",
+          "sizeGuideNote": "Custom dimensions and ply ratings can be manufactured to your exact requirements.",
+          "done": "Done"
+        }
+      },
+      "productExtraDetails": {
+        "eyebrow": "The Details",
+        "title": "Product Specifications",
+        "image": {
+          "src": "/images/corrugated-boxes.webp",
+          "alt": "Corrugated box technical specifications"
+        },
+        "specifications": [
+          {
+            "label": "Material",
+            "value": "Corrugated Kraft Paperboard"
+          },
+          {
+            "label": "Wall Type",
+            "value": "Single / Double / Triple Wall"
+          },
+          {
+            "label": "Flute Profile",
+            "value": "A, B, C, E, or B/C Combination"
+          },
+          {
+            "label": "Burst Strength",
+            "value": "14 to 28 kg/cm²"
+          },
+          {
+            "label": "Edge Crush Test (ECT)",
+            "value": "32 to 55 lbs/in"
+          },
+          {
+            "label": "Color",
+            "value": "Natural Kraft Brown / Bleached White"
+          },
+          {
+            "label": "Recyclability",
+            "value": "100% Biodegradable & Recyclable"
+          },
+          {
+            "label": "Custom Printing",
+            "value": "Flexographic & Screen Printing Available"
+          }
+        ]
+      },
+      "productListing": {
+        "products": [
+          {
+            "id": 1,
+            "name": "Heavy-Duty Corrugated Box",
+            "category": "Corrugated Boxes",
+            "materials": [
+              "Corrugated Fiberboard",
+              "Kraft Paperboard"
+            ],
+            "price": 35,
+            "image": "/images/corrugated-boxes.webp"
+          },
+          {
+            "id": 2,
+            "name": "Eco Kraft Paper Roll",
+            "category": "Kraft Paper",
+            "materials": [
+              "Kraft Paperboard",
+              "Virgin Kraft"
+            ],
+            "price": 45,
+            "image": "/images/kraft-paper.webp"
+          },
+          {
+            "id": 3,
+            "name": "Twisted Handle Paper Bag",
+            "category": "Paper Bags",
+            "materials": [
+              "Recycled Paper",
+              "Kraft Paperboard"
+            ],
+            "price": 15,
+            "image": "/images/paper-bags.webp"
+          },
+          {
+            "id": 4,
+            "name": "Custom Retail Box",
+            "category": "Custom Packaging",
+            "materials": [
+              "Corrugated Fiberboard",
+              "Kraft Paperboard"
+            ],
+            "price": 50,
+            "image": "/images/custom-packaging.webp"
+          },
+          {
+            "id": 5,
+            "name": "Double Wall Shipping Carton",
+            "category": "Corrugated Boxes",
+            "materials": [
+              "Corrugated Fiberboard"
+            ],
+            "price": 40,
+            "image": "/images/corrugated-packaging.webp"
+          },
+          {
+            "id": 6,
+            "name": "Brown Kraft Wrapping Sheet",
+            "category": "Kraft Paper",
+            "materials": [
+              "Virgin Kraft"
+            ],
+            "price": 25,
+            "image": "/images/kraft-paper-service.webp"
+          },
+          {
+            "id": 7,
+            "name": "Flat Handle Shopping Bag",
+            "category": "Paper Bags",
+            "materials": [
+              "Recycled Paper"
+            ],
+            "price": 12,
+            "image": "/images/paper-bags-service.webp"
+          },
+          {
+            "id": 8,
+            "name": "Custom Die-Cut Packaging Box",
+            "category": "Custom Packaging",
+            "materials": [
+              "Corrugated Fiberboard"
+            ],
+            "price": 55,
+            "image": "/images/custom-packaging-service.webp"
+          },
+          {
+            "id": 9,
+            "name": "Palletized Corrugated Container",
+            "category": "Corrugated Boxes",
+            "materials": [
+              "Corrugated Fiberboard",
+              "Kraft Paperboard"
+            ],
+            "price": 85,
+            "image": "/images/contact-packaging.webp"
+          }
+        ],
+        "categories": [
+          "Corrugated Boxes",
+          "Kraft Paper",
+          "Paper Bags",
+          "Custom Packaging"
+        ],
+        "materials": [
+          "Corrugated Fiberboard",
+          "Kraft Paperboard",
+          "Recycled Paper",
+          "Virgin Kraft"
+        ],
+        "pageSize": 6,
+        "minimumPrice": 0,
+        "maxPrice": 50000,
+        "priceStep": 500,
+        "defaultSort": "featured",
+        "sortOptions": [
+          {
+            "value": "featured",
+            "label": "Best Selling"
+          },
+          {
+            "value": "price-low",
+            "label": "Price: Low to High"
+          },
+          {
+            "value": "price-high",
+            "label": "Price: High to Low"
+          },
+          {
+            "value": "name",
+            "label": "Name: A to Z"
+          }
+        ],
+        "copy": {
+          "filters": "Filters",
+          "clearAll": "Clear all",
+          "category": "Category",
+          "priceRange": "Price Range",
+          "maximumPrice": "Maximum price",
+          "materials": "Material",
+          "sortBy": "Sort By",
+          "sortProducts": "Sort products",
+          "sort": "Sort",
+          "productsCount": "{count} products",
+          "showing": "Showing",
+          "of": "of",
+          "crafted": "Engineered for superior packaging",
+          "viewProduct": "View Product",
+          "viewProductAria": "View {name}",
+          "addToWishlist": "Add {name} to wishlist",
+          "removeFromWishlist": "Remove {name} from wishlist",
+          "inclusiveTaxes": "Inclusive of taxes",
+          "noProducts": "No packaging products found",
+          "emptyDescription": "Try changing your filters to discover more of our packaging products.",
+          "clearFilters": "Clear Filters",
+          "previousPage": "Previous page",
+          "page": "Page {page}",
+          "nextPage": "Next page",
+          "closeFilters": "Close filters",
+          "productFilters": "Product filters",
+          "showProducts": "Show {count} Products",
+          "resetFilters": "Reset Filters",
+          "minimumPrice": "₹0",
+          "collectionHref": "/products"
+        }
+      },
+      "gallery": {
+        "headingPrefix": "Our Packaging",
+        "headingHighlight": "Gallery",
+        "description": "Explore our diverse range of corrugated boxes, kraft paper products, paper bags, and manufacturing processes.",
+        "paginationAriaLabel": "Gallery pagination",
+        "previousPageLabel": "Previous page",
+        "nextPageLabel": "Next page",
+        "goToPageLabelTemplate": "Go to gallery page {page}",
+        "pageLabelTemplate": "Page {current} of {total}",
+        "itemsPerPage": 6,
+        "items": [
+          {
+            "id": 1,
+            "title": "Manufacturing Facility",
+            "category": "Facility",
+            "image": "/images/about-factory.webp"
+          },
+          {
+            "id": 2,
+            "title": "Corrugated Shipping Cartons",
+            "category": "Corrugated Boxes",
+            "image": "/images/corrugated-boxes.webp"
+          },
+          {
+            "id": 3,
+            "title": "Corrugated Packaging Solutions",
+            "category": "Corrugated Boxes",
+            "image": "/images/corrugated-packaging.webp"
+          },
+          {
+            "id": 4,
+            "title": "Eco-Friendly Kraft Paper",
+            "category": "Kraft Paper",
+            "image": "/images/kraft-paper.webp"
+          },
+          {
+            "id": 5,
+            "title": "Kraft Paper Rolls & Sheets",
+            "category": "Kraft Paper",
+            "image": "/images/kraft-paper-service.webp"
+          },
+          {
+            "id": 6,
+            "title": "Retail Paper Bags",
+            "category": "Paper Bags",
+            "image": "/images/paper-bags.webp"
+          },
+          {
+            "id": 7,
+            "title": "Custom Printed Paper Bags",
+            "category": "Paper Bags",
+            "image": "/images/paper-bags-service.webp"
+          },
+          {
+            "id": 8,
+            "title": "Bespoke Custom Packaging",
+            "category": "Custom Packaging",
+            "image": "/images/custom-packaging.webp"
+          },
+          {
+            "id": 9,
+            "title": "Custom Packaging Service",
+            "category": "Custom Packaging",
+            "image": "/images/custom-packaging-service.webp"
+          },
+          {
+            "id": 10,
+            "title": "Packaging Boxes & Materials",
+            "category": "Packaging Products",
+            "image": "/images/contact-packaging.webp"
+          },
+          {
+            "id": 11,
+            "title": "Heavy-Duty Corrugated Cartons",
+            "category": "Corrugated Boxes",
+            "image": "/images/corrugated-boxes.webp"
+          },
+          {
+            "id": 12,
+            "title": "High-Strength Kraft Paper",
+            "category": "Kraft Paper",
+            "image": "/images/kraft-paper.webp"
+          },
+          {
+            "id": 13,
+            "title": "Sustainable Retail Paper Bags",
+            "category": "Paper Bags",
+            "image": "/images/paper-bags.webp"
+          }
+        ]
+      },
+      "blog": {
+        "sectionEyebrow": "Packaging Insights",
+        "headingPrefix": "Latest updates and",
+        "headingHighlight": "packaging industry",
+        "headingSuffix": " insights",
+        "description": "Explore the essentials of sustainable packaging, learn about materials and design options, and discover how quality packaging protects your brand.",
+        "linkTemplate": "/blog/blog-details",
+        "detailsHref": "/blog/blog-details",
+        "readLabelTemplate": "Read {title}",
+        "moreDetailsLabel": "More Details",
+        "paginationAriaLabel": "Blog pagination",
+        "previousPageLabel": "Previous page",
+        "goToPageLabelTemplate": "Go to page {page}",
+        "nextPageLabel": "Next page",
+        "showingLabel": "Showing",
+        "rangeSeparator": "–",
+        "ofLabel": "of",
+        "articlesLabel": "articles",
+        "postsPerPage": 6,
+        "posts": [
+          {
+            "id": 1,
+            "category": "Sustainable Packaging",
+            "title": "Sustainable Packaging Trends: The Future of Eco-Friendly Materials",
+            "description": "Discover how eco-friendly paper bags and recyclable corrugated packaging are transforming modern supply chains.",
+            "image": "/images/corrugated-packaging.webp",
+            "date": "Nov 15",
+            "year": "2026",
+            "slug": "sustainable-packaging-trends-2026"
+          },
+          {
+            "id": 2,
+            "category": "Corrugated Packaging",
+            "title": "How to Choose the Right Corrugated Box for Shipping",
+            "description": "Learn the differences between single, double, and triple wall corrugated boxes to ensure maximum transit protection.",
+            "image": "/images/corrugated-boxes.webp",
+            "date": "Nov 10",
+            "year": "2026",
+            "slug": "choosing-right-corrugated-box"
+          },
+          {
+            "id": 3,
+            "category": "Kraft Paper",
+            "title": "The Versatility and Strength of Kraft Paper in Modern Packaging",
+            "description": "Why high-strength kraft paper remains the gold standard for durable wrapping, cushioning, and heavy-duty bags.",
+            "image": "/images/kraft-paper-service.webp",
+            "date": "Nov 05",
+            "year": "2026",
+            "slug": "kraft-paper-packaging-benefits"
+          },
+          {
+            "id": 4,
+            "category": "Custom Packaging",
+            "title": "Custom Packaging: Elevating Your Brand Experience and Customer Loyalty",
+            "description": "How custom-printed boxes and branded packaging create an unforgettable unboxing experience.",
+            "image": "/images/custom-packaging-service.webp",
+            "date": "Oct 28",
+            "year": "2026",
+            "slug": "custom-packaging-elevating-brand-experience"
+          },
+          {
+            "id": 5,
+            "category": "Retail Solutions",
+            "title": "Retail Paper Bags: The Sustainable Alternative to Single-Use Plastic",
+            "description": "Why leading retail and food brands are adopting durable kraft paper bags for sustainable customer convenience.",
+            "image": "/images/paper-bags.webp",
+            "date": "Oct 18",
+            "year": "2026",
+            "slug": "retail-paper-bags-vs-plastic"
+          },
+          {
+            "id": 6,
+            "category": "Industrial Packaging",
+            "title": "Industrial Packaging: Safeguarding Heavy Cargo and Optimizing Logistics",
+            "description": "How heavy-duty corrugated cartons and palletized packaging streamline warehouse logistics and minimize freight damage.",
+            "image": "/images/custom-packaging.webp",
+            "date": "Oct 05",
+            "year": "2026",
+            "slug": "industrial-packaging-logistics-efficiency"
+          },
+          {
+            "id": 7,
+            "category": "Packaging Quality",
+            "title": "Quality Control Standards in Paper and Corrugated Manufacturing",
+            "description": "Essential tests including edge crush, burst strength, and drop testing that guarantee packaging reliability.",
+            "image": "/images/about-factory.webp",
+            "date": "Sep 22",
+            "year": "2026",
+            "slug": "quality-control-paper-packaging"
+          },
+          {
+            "id": 8,
+            "category": "Sustainable Packaging",
+            "title": "Biodegradable Coatings vs Plastic Laminates in Packaging",
+            "description": "Comparing environmental footprints and water resistance in modern eco-friendly packaging liners.",
+            "image": "/images/corrugated-packaging.webp",
+            "date": "Sep 14",
+            "year": "2026",
+            "slug": "biodegradable-coatings-packaging"
+          },
+          {
+            "id": 9,
+            "category": "Kraft Paper",
+            "title": "Recycled vs Virgin Kraft Paper: Making the Right Packaging Choice",
+            "description": "A comprehensive comparison of tensile strength, printability, and sustainability for both kraft paper types.",
+            "image": "/images/kraft-paper.webp",
+            "date": "Aug 29",
+            "year": "2026",
+            "slug": "recycled-vs-virgin-kraft-paper"
+          },
+          {
+            "id": 10,
+            "category": "Retail Solutions",
+            "title": "Branded Paper Bags: Transforming Retail Shoppers into Brand Advocates",
+            "description": "Maximizing visibility and customer perception through thoughtfully designed retail shopping bags.",
+            "image": "/images/paper-bags-service.webp",
+            "date": "Aug 15",
+            "year": "2026",
+            "slug": "branded-paper-bags-retail-success"
+          },
+          {
+            "id": 11,
+            "category": "Industrial Packaging",
+            "title": "Optimizing Box Sizing to Reduce Freight Shipping Costs",
+            "description": "Dimensional weight calculations and how right-sized custom cartons significantly cut transportation expenses.",
+            "image": "/images/contact-packaging.webp",
+            "date": "Aug 02",
+            "year": "2026",
+            "slug": "optimizing-box-sizing-freight-costs"
+          }
+        ]
+      },
+      "blogDetails": {
+        "hero": {
+          "breadcrumbLabel": "Breadcrumb",
+          "image": {
+            "src": "/images/corrugated-packaging.webp",
+            "alt": "BOXNEXA Packaging Insights"
+          },
+          "heading": "Blog Details",
+          "homeLabel": "Home",
+          "homeHref": "/",
+          "currentLabel": "Blog Details"
+        },
+        "eyebrow": "Packaging Insights",
+        "headingFirst": "Understanding Sustainable Packaging: ",
+        "headingHighlight": "A Complete Guide for Growing Businesses",
+        "dateTime": "2026-11-15",
+        "dateLabel": "NOV 15, 2026",
+        "introduction": "Explore the essentials of sustainable packaging, learn about corrugated materials and design options, and discover how quality packaging protects and enhances your brand.",
+        "image": {
+          "src": "/images/corrugated-packaging.webp",
+          "alt": "BOXNEXA sustainable paper packaging boxes"
+        },
+        "quotation": "High-quality, durable, and eco-friendly packaging adds lasting value to your products and builds customer trust.",
+        "backLabel": "Back to Articles",
+        "articleHeading": "Sustainable Packaging Best Practices",
+        "disclaimer": {
+          "label": "Industry Note:",
+          "text": "This article is for general informational purposes to help businesses understand paper and corrugated packaging standards."
+        },
+        "tips": [
+          {
+            "number": "01.",
+            "title": "A Guide to Getting Started",
+            "sectionTitle": "Understanding your packaging needs",
+            "paragraphs": [
+              "Every business has distinct product requirements, shipping channels, and customer expectations. Understanding your packaging options ensures your products arrive safely and represent your brand well.",
+              "A good starting point is assessing product dimensions, weight, fragility, and transit handling conditions with our packaging team to determine the ideal material specifications."
+            ]
+          },
+          {
+            "number": "02.",
+            "title": "Material selection and sustainability",
+            "sectionTitle": "Material selection and sustainability",
+            "paragraphs": [
+              "Selecting high-strength kraft linerboard and corrugated fluting provides robust impact absorption and stacking durability while remaining 100% recyclable.",
+              "Choosing right-sized packaging reduces void fill, minimizes transit damage, and lowers carbon emissions across distribution routes."
+            ]
+          },
+          {
+            "number": "03.",
+            "title": "Custom branding and design",
+            "sectionTitle": "Custom branding and design",
+            "paragraphs": [
+              "High-definition flexographic and screen printing enable bold, clear brand messaging directly on corrugated boxes and paper bags."
+            ],
+            "cards": [
+              {
+                "icon": "heart",
+                "title": "Tailored guidance",
+                "text": "Discuss product dimensions and custom printing options with our packaging specialists."
+              },
+              {
+                "icon": "message-circle",
+                "title": "Clear communication",
+                "text": "Get transparent quotes on ply ratings, lead times, minimum order quantities, and delivery schedules."
+              }
+            ]
+          },
+          {
+            "number": "04.",
+            "title": "Key questions for your packaging partner",
+            "sectionTitle": "Key questions for your packaging partner",
+            "paragraphs": [
+              "Preparing your technical questions ensures you choose the most cost-effective and protective packaging setup for your business.",
+              "What flute profile and wall thickness best protect my product weight?",
+              "Can custom branding and logos be printed on both exterior and interior surfaces?",
+              "What are the standard lead times and minimum order quantities?",
+              "Are the materials fully certified as 100% recyclable and eco-friendly?"
+            ]
+          }
+        ]
+      },
+      "enquiryNow": {
+        "hero": {
+          "breadcrumbLabel": "Breadcrumb",
+          "image": {
+            "src": "/images/contact-packaging.webp",
+            "alt": "BOXNEXA paper packaging boxes and kraft paper"
+          },
+          "heading": "Request a Quote",
+          "homeLabel": "Home",
+          "homeHref": "/",
+          "currentLabel": "Request a Quote"
+        },
+        "section": {
+          "image": {
+            "src": "/images/contact-packaging.webp",
+            "alt": "BOXNEXA paper packaging boxes and kraft paper"
+          },
+          "benefitsHeader": {
+            "eyebrow": "Get a Quote",
+            "title": "Let's Get Started",
+            "description": "Complete the form to request your packaging quote."
+          },
+          "benefits": [
+            {
+              "icon": "HeartPulse",
+              "title": "Premium Quality",
+              "description": "Durable materials and superior craftsmanship"
+            },
+            {
+              "icon": "UserRound",
+              "title": "Sustainable & Eco-Friendly",
+              "description": "100% recyclable paper packaging"
+            },
+            {
+              "icon": "MonitorCheck",
+              "title": "Custom Solutions",
+              "description": "Tailored sizes, prints, and designs"
+            },
+            {
+              "icon": "UsersRound",
+              "title": "Timely Delivery",
+              "description": "Dependable supply and on-time dispatch"
+            }
+          ],
+          "form": {
+            "eyebrow": "Get a Quote",
+            "title": "Send Us a Message",
+            "description": "Complete the form to request your packaging quote.",
+            "fields": {
+              "fullName": {
+                "label": "Your Name *",
+                "placeholder": "Your Name *"
+              },
+              "email": {
+                "label": "Your Email *",
+                "placeholder": "info@XYZ.com"
+              },
+              "phone": {
+                "label": "Phone Number *",
+                "placeholder": "+1 00000000"
+              },
+              "interest": {
+                "label": "Packaging Requirement *",
+                "placeholder": "Select packaging type",
+                "options": [
+                  "Corrugated Boxes",
+                  "Kraft Paper Solutions",
+                  "Paper Bags",
+                  "Custom Packaging",
+                  "Retail Packaging",
+                  "Industrial Packaging",
+                  "General Enquiry"
+                ]
+              },
+              "lastName": {
+                "label": "Company Name",
+                "placeholder": "Your Company Name"
+              },
+              "doctor": {
+                "label": "Preferred Packaging Category",
+                "options": [
+                  "All Categories",
+                  "Corrugated Boxes",
+                  "Kraft Paper",
+                  "Paper Bags",
+                  "Custom Packaging"
+                ]
+              },
+              "date": {
+                "label": "Target Delivery Date *"
+              },
+              "time": {
+                "label": "Preferred Contact Time *",
+                "placeholder": "Select time",
+                "options": [
+                  "09:00 AM",
+                  "10:00 AM",
+                  "11:00 AM",
+                  "12:00 PM",
+                  "02:00 PM",
+                  "03:00 PM",
+                  "04:00 PM",
+                  "05:00 PM"
+                ]
+              },
+              "appointmentType": {
+                "label": "How would you like to connect?",
+                "options": [
+                  {
+                    "value": "In-clinic",
+                    "label": "Phone Call"
+                  },
+                  {
+                    "value": "Online",
+                    "label": "Email Response"
+                  }
+                ]
+              },
+              "message": {
+                "label": "Your Message *",
+                "placeholder": "Tell us about your packaging requirements...",
+                "maxLength": 3000,
+                "counterSeparator": "/"
+              }
+            },
+            "status": {
+              "success": "Your enquiry has been submitted successfully.",
+              "error": "We couldn't submit your enquiry. Please try again.",
+              "requestError": "Unable to submit enquiry."
+            },
+            "submit": {
+              "label": "Send Message",
+              "submitting": "Sending..."
+            },
+            "privacyNotice": "Your information is handled securely and confidentially by BOXNEXA.",
+            "appointment": {
+              "successTitle": "Quote Request Prepared!",
+              "successText": "Your form passed browser validation. Our packaging specialists will contact you promptly.",
+              "successButton": "Send Another Enquiry",
+              "submitLabel": "Send Message"
+            }
+          }
+        }
+      },
+      "signatureCollections": {
+        "homeSection": {
+          "eyebrow": "Our Products",
+          "title": "Explore Our",
+          "highlight": "Packaging Products",
+          "description": "High-quality, durable and customizable paper packaging for a wide range of business needs."
+        },
+        "eyebrow": "Our Services & Products",
+        "title": "Packaging Solutions",
+        "viewAll": {
+          "label": "All Products",
+          "href": "#products"
+        },
+        "collections": [
+          {
+            "name": "Corrugated Boxes",
+            "homeTitle": "Corrugated Boxes",
+            "icon": "box",
+            "href": "/products/corrugated-boxes",
+            "description": "Durable and reliable corrugated boxes for safe and efficient shipping.",
+            "image": "/images/corrugated-boxes.webp",
+            "alt": "Corrugated Boxes at BOXNEXA",
+            "number": "01"
+          },
+          {
+            "name": "Kraft Paper Solutions",
+            "homeTitle": "Kraft Paper",
+            "icon": "scroll",
+            "href": "/products/kraft-paper",
+            "description": "High-strength, eco-friendly kraft paper for versatile applications.",
+            "image": "/images/kraft-paper.webp",
+            "alt": "Kraft Paper Solutions at BOXNEXA",
+            "number": "02"
+          },
+          {
+            "name": "Paper Bags",
+            "homeTitle": "Paper Bags",
+            "icon": "shopping-bag",
+            "href": "/products/paper-bags",
+            "description": "Strong, recyclable and brand-ready paper bags for retail and business.",
+            "image": "/images/paper-bags.webp",
+            "alt": "Paper Bags at BOXNEXA",
+            "number": "03"
+          },
+          {
+            "name": "Custom Packaging",
+            "homeTitle": "Custom Packaging",
+            "icon": "layers",
+            "href": "/products/custom-packaging",
+            "description": "Tailored, high-quality packaging designed to fit your product perfectly.",
+            "image": "/images/custom-packaging.webp",
+            "alt": "Custom Packaging at BOXNEXA",
+            "number": "04"
+          }
+        ]
+      }
+    },
+    "sections": {
+      "Site": {
+        "variants": {
+          "InsuranceSite1": {
+            "bgImage": "/images/hero-bg.webp",
+            "alt": "BOXNEXA - Paper and Packaging Solutions",
+            "name": "BOXNEXA",
+            "homeLabel": "Home",
+            "homeHref": "/",
+            "language": "en",
+            "description": "High-Quality, Custom & Sustainable Packaging for Every Business",
+            "logo": "/images/logo.webp",
+            "logoWhite": "/images/logo.webp",
+            "heroImage": "/images/hero-bg.webp",
+            "heroImageAlt": "BOXNEXA Paper & Packaging Solutions",
+            "metadata": {
+              "title": "BOXNEXA",
+              "description": "High-Quality, Custom & Sustainable Packaging for Every Business",
+              "icons": {
+                "icon": "/favicon.webp"
+              }
+            },
+            "mobileMenu": {
+              "openLabel": "Open navigation menu",
+              "closeLabel": "Close navigation menu",
+              "contactLabel": "Contact Us",
+              "contactHref": "#contact",
+              "ariaLabel": "Mobile navigation",
+              "phoneLabel": "+1 00000000",
+              "phoneHref": "tel:+911140197514",
+              "emailLabel": "info@XYZ.com",
+              "emailHref": "mailto:info@XYZ.com"
+            },
+            "addressLines": [
+              "47, Shardhanand Marg, G.B. Road,",
+              "Delhi – 110006"
+            ],
+            "emails": [
+              "info@XYZ.com"
+            ],
+            "phones": [
+              "+1 00000000"
+            ],
+            "callLabel": "Call Us",
+            "bannerImage": "/images/hero-bg.webp",
+            "socials": [
+              {
+                "icon": "instagram",
+                "label": "Instagram",
+                "href": "https://www.instagram.com/"
+              },
+              {
+                "icon": "youtube",
+                "label": "YouTube",
+                "href": "https://www.youtube.com/"
+              },
+              {
+                "icon": "facebook",
+                "label": "Facebook",
+                "href": "https://www.facebook.com/"
+              },
+              {
+                "icon": "twitter",
+                "label": "Twitter",
+                "href": "https://www.twitter.com/"
+              }
+            ],
+            "hours": [
+              {
+                "days": "Monday – Saturday",
+                "daysShort": "Mon - Sat",
+                "time": "09:30 AM – 06:30 PM"
+              },
+              {
+                "days": "Sunday",
+                "daysShort": "Sunday",
+                "time": "Closed"
+              }
+            ]
+          }
+        }
+      },
+      "Header": {
+        "variants": {
+          "InsuranceHeader1": {
+            "ariaLabel": "Main navigation",
+            "links": [
+              {
+                "label": "Home",
+                "href": "/",
+                "active": true
+              },
+              {
+                "label": "About Us",
+                "href": "#about",
+                "active": false
+              },
+              {
+                "label": "Services",
+                "href": "#services",
+                "dropdown": false,
+                "active": false
+              },
+              {
+                "label": "Products",
+                "href": "#products",
+                "active": false
+              },
+              {
+                "label": "Industry We Serve",
+                "href": "#industries",
+                "active": false
+              },
+              {
+                "label": "Testimonials",
+                "href": "#testimonials",
+                "active": false
+              },
+              {
+                "label": "Contact Us",
+                "href": "#contact",
+                "active": false
+              }
+            ],
+            "button": {
+              "label": "Get a Quote",
+              "href": "#contact"
+            },
+            "mobileButton": {
+              "label": "Get a Quote",
+              "href": "/contact"
+            }
+          }
+        }
+      },
+      "Hero": {
+        "variants": {
+          "InsuranceHero1": {
+            "homeTextLines": [
+              "High-Quality, Custom & Sustainable",
+              "Packaging for Every Business"
+            ],
+            "slides": [
+              {
+                "eyebrow": "Welcome to Boxnexa",
+                "title": [
+                  "Paper &",
+                  "Packaging",
+                  "Solutions"
+                ],
+                "text": "High-Quality, Custom & Sustainable Packaging for Every Business",
+                "image": "/images/hero-bg.webp",
+                "imageAlt": "BOXNEXA Paper & Packaging Solutions"
+              },
+              {
+                "eyebrow": "Our Services",
+                "title": [
+                  "Complete Paper &",
+                  "Packaging Services"
+                ],
+                "text": "From concept to delivery, we provide end-to-end packaging solutions tailored to your business needs.",
+                "image": "/images/corrugated-packaging.webp",
+                "imageAlt": "Corrugated packaging boxes and paper solutions"
+              },
+              {
+                "eyebrow": "Our Products",
+                "title": [
+                  "Explore Our",
+                  "Packaging Products"
+                ],
+                "text": "High-quality, durable and customizable paper packaging for a wide range of business needs.",
+                "image": "/images/custom-packaging.webp",
+                "imageAlt": "Custom packaging and eco-friendly paper bags"
+              }
+            ]
+          }
+        }
+      },
+      "Highlights": {
+        "variants": {
+          "InsuranceHighlights1": {
+            "items": [
+              {
+                "icon": "award",
+                "title": "Premium Quality",
+                "text": "Durable, high-grade packaging materials crafted to perfection."
+              },
+              {
+                "icon": "leaf",
+                "title": "Sustainable & Eco-Friendly",
+                "text": "Recyclable and environmentally conscious paper packaging solutions."
+              },
+              {
+                "icon": "layers",
+                "title": "Custom Solutions",
+                "text": "Tailored, high-quality packaging designed to fit your product perfectly."
+              },
+              {
+                "icon": "box",
+                "title": "Corrugated Packaging",
+                "text": "Durable and reliable corrugated boxes for safe and efficient shipping."
+              },
+              {
+                "icon": "scroll",
+                "title": "Kraft Paper Solutions",
+                "text": "High-strength, eco-friendly kraft paper for versatile applications."
+              },
+              {
+                "icon": "shopping-bag",
+                "title": "Paper Bags",
+                "text": "Strong, recyclable and brand-ready paper bags for retail and business."
+              }
+            ]
+          }
+        }
+      },
+      "About": {
+        "variants": {
+          "InsuranceAbout1": {
+            "heroTitle": "About Us",
+            "homeSection": {
+              "eyebrow": "About Us",
+              "title": [
+                "About",
+                "BOXNEXA"
+              ],
+              "description": [
+                "BOXNEXA is a trusted name in paper and packaging solutions, delivering high-quality, durable, and eco-friendly packaging for businesses across diverse industries. We combine modern manufacturing, premium materials, and a customer-focused approach to create packaging that protects, presents, and adds value to your products."
+              ],
+              "features": [
+                {
+                  "title": "Premium",
+                  "subtitle": "Quality",
+                  "icon": "award"
+                },
+                {
+                  "title": "Sustainable",
+                  "subtitle": "& Eco-Friendly",
+                  "icon": "leaf"
+                },
+                {
+                  "title": "Custom",
+                  "subtitle": "Solutions",
+                  "icon": "layers"
+                }
+              ]
+            },
+            "eyebrow": "About Us",
+            "title": "About",
+            "highlight": "BOXNEXA",
+            "mainImage": "/images/about-factory.webp",
+            "mainImageAlt": "BOXNEXA paper manufacturing and packaging facility",
+            "familyImage": "/images/contact-packaging.webp",
+            "familyImageAlt": "BOXNEXA paper packaging boxes and kraft paper",
+            "homeText": "BOXNEXA is a trusted name in paper and packaging solutions, delivering high-quality, durable, and eco-friendly packaging for businesses across diverse industries. We combine modern manufacturing, premium materials, and a customer-focused approach to create packaging that protects, presents, and adds value to your products.",
+            "experience": {
+              "value": "10+",
+              "label": [
+                "Years of",
+                "Excellence"
+              ]
+            },
+            "points": [
+              {
+                "icon": "award",
+                "title": "Premium Quality",
+                "text": "Durable materials and superior craftsmanship"
+              },
+              {
+                "icon": "leaf",
+                "title": "Sustainable & Eco-Friendly",
+                "text": "100% recyclable, eco-friendly paper solutions"
+              }
+            ],
+            "button": {
+              "label": "Get a Quote",
+              "href": "#contact"
+            },
+            "pageParagraphs": [
+              "BOXNEXA is a trusted name in paper and packaging solutions, delivering high-quality, durable, and eco-friendly packaging for businesses across diverse industries.",
+              "We combine modern manufacturing, premium materials, and a customer-focused approach to create packaging that protects, presents, and adds value to your products.",
+              "From corrugated boxes to eco-friendly kraft paper and custom retail packaging, we engineer solutions built to last.",
+              "Our sustainable packaging ensures your brand stands out while minimizing environmental impact."
+            ],
+            "mission": {
+              "eyebrow": "What guides us",
+              "title": [
+                "Our",
+                "Mission"
+              ],
+              "button": {
+                "label": "Explore Services",
+                "href": "#services"
+              },
+              "image": "/images/about-factory.webp",
+              "imageAlt": "BOXNEXA paper manufacturing and packaging facility"
+            },
+            "values": {
+              "eyebrow": "Our Values",
+              "title": "What Drives Us",
+              "text": "We combine modern manufacturing, premium materials, and a customer-focused approach to create packaging that protects, presents, and adds value to your products.",
+              "image": "/images/contact-packaging.webp",
+              "imageAlt": "BOXNEXA paper packaging products"
+            }
+          }
+        }
+      },
+      "WhyChooseUs": {
+        "variants": {
+          "InsuranceWhyChooseUs1": {
+            "eyebrow": "Why Choose Us",
+            "title": "Why Choose",
+            "titleLine2": "BOXNEXA for",
+            "highlight": "Packaging",
+            "text": "We combine modern manufacturing, premium materials, and a customer-focused approach to create packaging that protects, presents, and adds value to your products.",
+            "image": "/images/about-factory.webp",
+            "imageAlt": "BOXNEXA manufacturing facility and packaging process",
+            "items": [
+              {
+                "icon": "award",
+                "title": [
+                  "Premium",
+                  "Quality"
+                ],
+                "text": [
+                  "High-strength,",
+                  "durable materials",
+                  "for maximum protection."
+                ]
+              },
+              {
+                "icon": "leaf",
+                "title": [
+                  "Sustainable &",
+                  "Eco-Friendly"
+                ],
+                "text": [
+                  "100% recyclable,",
+                  "sustainable paper",
+                  "and packaging."
+                ]
+              },
+              {
+                "icon": "layers",
+                "title": [
+                  "Custom",
+                  "Solutions"
+                ],
+                "text": [
+                  "Tailored sizes,",
+                  "prints, and designs",
+                  "for every business."
+                ]
+              },
+              {
+                "icon": "truck",
+                "title": [
+                  "Timely",
+                  "Delivery"
+                ],
+                "text": [
+                  "Dependable supply",
+                  "chain and",
+                  "on-time dispatch."
+                ]
+              },
+              {
+                "icon": "box",
+                "title": [
+                  "Modern",
+                  "Manufacturing"
+                ],
+                "text": [
+                  "Advanced box",
+                  "making machinery and",
+                  "rigorous quality control."
+                ]
+              },
+              {
+                "icon": "shield-check",
+                "title": [
+                  "Customer",
+                  "Centric"
+                ],
+                "text": [
+                  "Dedicated support",
+                  "and end-to-end",
+                  "packaging guidance."
+                ]
+              }
+            ],
+            "homeItemCount": 4
+          }
+        }
+      },
+      "Plans": {
+        "variants": {
+          "InsurancePlans1": {
+            "heroTitle": "Our Services",
+            "eyebrow": "Our Services",
+            "title": "Complete Paper &",
+            "highlight": "Packaging Services",
+            "text": "From concept to delivery, we provide end-to-end packaging solutions tailored to your business needs.",
+            "buttonLabel": "Get a Quote",
+            "serviceDetailsHref": "#contact",
+            "learnMoreLabelTemplate": "Learn more about {name}",
+            "homeImage": "/images/corrugated-packaging.webp",
+            "homeImageAlt": "BOXNEXA paper and packaging solutions",
+            "homeServiceSlugs": [
+              "corrugated-packaging",
+              "kraft-paper-solutions",
+              "paper-bags",
+              "custom-packaging"
+            ],
+            "treatmentCardCount": 2,
+            "treatmentHeading": [
+              "Complete Paper &",
+              "Packaging Solutions"
+            ],
+            "items": [
+              {
+                "slug": "corrugated-packaging",
+                "title": "Corrugated Packaging",
+                "icon": "box",
+                "homeIcon": "box",
+                "text": "Durable and reliable corrugated boxes for safe and efficient shipping.",
+                "lines": [
+                  "Durable and reliable",
+                  "corrugated boxes for",
+                  "safe shipping."
+                ],
+                "homeText": [
+                  "Durable and reliable",
+                  "corrugated boxes for",
+                  "safe shipping."
+                ],
+                "image": "/images/corrugated-packaging.webp",
+                "homeImage": "/images/corrugated-packaging.webp",
+                "treatmentImageAlt": "Corrugated packaging boxes",
+                "homeHref": "/services/corrugated-packaging",
+                "detailImage": "/images/corrugated-boxes.webp",
+                "relatedText": [
+                  "Durable and reliable",
+                  "corrugated boxes."
+                ],
+                "overview": [
+                  "Durable and reliable corrugated boxes for safe and efficient shipping.",
+                  "High-quality, durable and customizable paper packaging for a wide range of business needs."
+                ]
+              },
+              {
+                "slug": "kraft-paper-solutions",
+                "title": "Kraft Paper Solutions",
+                "icon": "scroll",
+                "homeIcon": "scroll",
+                "text": "High-strength, eco-friendly kraft paper for versatile applications.",
+                "lines": [
+                  "High-strength,",
+                  "eco-friendly kraft paper",
+                  "for versatile uses."
+                ],
+                "homeText": [
+                  "High-strength,",
+                  "eco-friendly kraft paper",
+                  "for versatile uses."
+                ],
+                "image": "/images/kraft-paper-service.webp",
+                "homeImage": "/images/kraft-paper-service.webp",
+                "treatmentImageAlt": "Kraft paper solutions",
+                "homeHref": "/services/kraft-paper",
+                "thumb": "/images/kraft-paper.webp",
+                "relatedText": [
+                  "High-strength,",
+                  "eco-friendly kraft paper."
+                ],
+                "overview": [
+                  "High-strength, eco-friendly kraft paper for versatile applications.",
+                  "Recyclable and environmentally friendly kraft paper engineered for durability and strength."
+                ]
+              },
+              {
+                "slug": "paper-bags",
+                "title": "Paper Bags",
+                "icon": "shopping-bag",
+                "homeIcon": "shopping-bag",
+                "text": "Strong, recyclable and brand-ready paper bags for retail and business.",
+                "lines": [
+                  "Strong, recyclable and",
+                  "brand-ready paper bags",
+                  "for retail."
+                ],
+                "homeText": [
+                  "Strong, recyclable and",
+                  "brand-ready paper bags",
+                  "for retail."
+                ],
+                "image": "/images/paper-bags-service.webp",
+                "homeImage": "/images/paper-bags-service.webp",
+                "homeImageAlt": "Eco-friendly paper bags",
+                "homeHref": "/services/paper-bags",
+                "thumb": "/images/paper-bags.webp",
+                "relatedText": [
+                  "Strong, recyclable",
+                  "paper bags."
+                ],
+                "overview": [
+                  "Strong, recyclable and brand-ready paper bags for retail and business.",
+                  "Custom printed and standard paper bags tailored to enhance brand identity and sustainable packaging."
+                ]
+              },
+              {
+                "slug": "custom-packaging",
+                "title": "Custom Packaging",
+                "icon": "layers",
+                "homeIcon": "layers",
+                "text": "Tailored, high-quality packaging designed to fit your product perfectly.",
+                "lines": [
+                  "Tailored, high-quality",
+                  "packaging designed to",
+                  "fit your product."
+                ],
+                "homeText": [
+                  "Tailored, high-quality",
+                  "packaging designed to",
+                  "fit your product."
+                ],
+                "image": "/images/custom-packaging-service.webp",
+                "homeImage": "/images/custom-packaging-service.webp",
+                "homeImageAlt": "Custom packaging solutions",
+                "homeHref": "/services/custom-packaging",
+                "thumb": "/images/custom-packaging.webp",
+                "relatedText": [
+                  "Tailored, high-quality",
+                  "packaging solutions."
+                ],
+                "overview": [
+                  "Tailored, high-quality packaging designed to fit your product perfectly.",
+                  "Engineered specifically to protect, present, and elevate your products with custom shapes and designs."
+                ]
+              },
+              {
+                "slug": "corrugated-boxes",
+                "title": "Corrugated Boxes",
+                "icon": "box",
+                "homeIcon": "box",
+                "text": "High-durability corrugated boxes in single, double, and triple wall options.",
+                "lines": [
+                  "High-durability",
+                  "corrugated boxes in",
+                  "various ply ratings."
+                ],
+                "homeText": [
+                  "High-durability",
+                  "corrugated boxes in",
+                  "various ply ratings."
+                ],
+                "image": "/images/corrugated-boxes.webp",
+                "homeImage": "/images/corrugated-boxes.webp",
+                "homeImageAlt": "Corrugated boxes",
+                "thumb": "/images/corrugated-boxes.webp",
+                "relatedText": [
+                  "High-durability",
+                  "corrugated boxes."
+                ],
+                "overview": [
+                  "High-durability corrugated boxes engineered for shipping and storage across all industries.",
+                  "Available in custom dimensions, heavy-duty flute profiles, and custom branding options."
+                ]
+              },
+              {
+                "slug": "kraft-paper-rolls",
+                "title": "Kraft Paper Rolls & Sheets",
+                "icon": "scroll-text",
+                "homeIcon": "scroll-text",
+                "text": "Premium kraft paper rolls and sheets for wrapping, void filling, and packaging.",
+                "lines": [
+                  "Premium kraft paper",
+                  "rolls and sheets",
+                  "for wrapping."
+                ],
+                "homeText": [
+                  "Premium kraft paper",
+                  "rolls and sheets",
+                  "for wrapping."
+                ],
+                "image": "/images/kraft-paper.webp",
+                "homeImage": "/images/kraft-paper.webp",
+                "homeImageAlt": "Kraft paper rolls and sheets",
+                "relatedText": [
+                  "Premium kraft paper",
+                  "rolls and sheets."
+                ],
+                "overview": [
+                  "Premium kraft paper rolls and sheets for wrapping, void filling, and packaging applications.",
+                  "Made from virgin and recycled fibers offering superior tear strength and tensile endurance."
+                ]
+              },
+              {
+                "slug": "retail-paper-bags",
+                "title": "Retail & Shopping Bags",
+                "icon": "shopping-bag",
+                "homeIcon": "shopping-bag",
+                "text": "Premium kraft and white paper bags with twisted, flat, or die-cut handles.",
+                "lines": [
+                  "Premium kraft and",
+                  "white paper bags",
+                  "with handles."
+                ],
+                "homeText": [
+                  "Premium kraft and",
+                  "white paper bags",
+                  "with handles."
+                ],
+                "image": "/images/paper-bags.webp",
+                "homeImage": "/images/paper-bags.webp",
+                "homeImageAlt": "Retail paper bags with handles",
+                "relatedText": [
+                  "Premium kraft and",
+                  "white paper bags."
+                ],
+                "overview": [
+                  "Premium kraft and white paper bags with twisted, flat, or die-cut handles for retail brands.",
+                  "Durable, high-load-bearing, and 100% recyclable bags designed for commercial retail stores."
+                ]
+              },
+              {
+                "slug": "industrial-custom-packaging",
+                "title": "Industrial Custom Packaging",
+                "icon": "package-check",
+                "homeIcon": "package-check",
+                "text": "Specialized custom industrial packaging designed for heavy goods and logistics.",
+                "lines": [
+                  "Specialized custom",
+                  "industrial packaging for",
+                  "heavy goods."
+                ],
+                "homeText": [
+                  "Specialized custom",
+                  "industrial packaging for",
+                  "heavy goods."
+                ],
+                "image": "/images/custom-packaging.webp",
+                "homeImage": "/images/custom-packaging.webp",
+                "relatedText": [
+                  "Specialized custom",
+                  "industrial packaging."
+                ],
+                "overview": [
+                  "Specialized custom industrial packaging designed for heavy goods and logistics.",
+                  "Tailored protective inserts, die-cut boxes, and reinforced corrugated designs for maximum transit safety."
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "PlanDetail": {
+        "variants": {
+          "InsurancePlanDetail1": {
+            "bannerTitle": "Packaging Service Details",
+            "overviewEyebrow": "Tailored Packaging Solutions",
+            "overviewTitle": "Every Business Has Unique Packaging Needs",
+            "featuresEyebrow": "Our Packaging Capabilities",
+            "featuresTitle": "Learn About Our",
+            "featuresSuffix": "Paper & Packaging Solutions",
+            "overviewText": "From concept to delivery, we provide end-to-end packaging solutions tailored to your business needs, ensuring maximum durability, brand appeal, and sustainability.",
+            "introCards": [
+              {
+                "icon": "heart",
+                "title": "Premium Quality",
+                "text": "Durable materials and superior craftsmanship."
+              },
+              {
+                "icon": "microscope",
+                "title": "Sustainable",
+                "text": "Eco-friendly, 100% recyclable paper materials."
+              },
+              {
+                "icon": "shield-check",
+                "title": "Custom Solutions",
+                "text": "Tailored packaging designs to fit your product perfectly."
+              }
+            ],
+            "treatmentSectionTitle": "Find the Packaging That Fits You",
+            "treatmentSectionText": "Explore our specialized packaging solutions and discuss custom specifications with our team.",
+            "treatments": [
+              {
+                "slug": "corrugated-packaging",
+                "number": "01",
+                "eyebrow": "High-Durability Shipping",
+                "subtitle": "Durable and reliable corrugated boxes for safe shipping.",
+                "description": "Engineered to withstand heavy loads, stacking pressures, and long-distance transit. Available in single, double, and triple wall configurations.",
+                "image": "/images/corrugated-packaging.webp",
+                "imageAlt": "Corrugated packaging boxes",
+                "features": [
+                  "Custom sizing and ply strengths",
+                  "High burst strength and edge crush resistance",
+                  "Custom printing and branding options",
+                  "100% recyclable corrugated board"
+                ],
+                "process": [
+                  {
+                    "title": "Requirement Analysis",
+                    "description": "We analyze your product dimensions, weight, and transit conditions."
+                  },
+                  {
+                    "title": "Design & Prototyping",
+                    "description": "Custom box structure and strength calculations are prepared."
+                  },
+                  {
+                    "title": "Precision Manufacturing",
+                    "description": "Advanced corrugation, slotting, and die-cutting machinery produce the boxes."
+                  },
+                  {
+                    "title": "Quality Testing & Dispatch",
+                    "description": "Burst test and drop test inspection before timely delivery."
+                  }
+                ]
+              },
+              {
+                "slug": "custom-packaging",
+                "number": "02",
+                "eyebrow": "Bespoke Packaging Solutions",
+                "subtitle": "Tailored, high-quality packaging designed to fit your product.",
+                "description": "We combine modern manufacturing, premium materials, and custom finishes to create packaging that protects, presents, and adds value to your products.",
+                "image": "/images/custom-packaging-service.webp",
+                "imageAlt": "Custom packaging service and design",
+                "features": [
+                  "Bespoke dimensions and structural designs",
+                  "High-definition multi-color printing",
+                  "Eco-friendly biodegradable coatings",
+                  "Rigorous quality assurance"
+                ],
+                "process": [
+                  {
+                    "title": "Concept & Consultation",
+                    "description": "Discuss your product protection and branding requirements."
+                  },
+                  {
+                    "title": "Custom Structural Design",
+                    "description": "Tailored die-line development and material selection."
+                  },
+                  {
+                    "title": "High-Quality Production",
+                    "description": "Modern printing, folding, and finishing execution."
+                  },
+                  {
+                    "title": "Inspection & Timely Delivery",
+                    "description": "Strict quality control ensuring perfection before dispatch."
+                  }
+                ]
+              }
+            ],
+            "processSectionEyebrow": "Our Process",
+            "processSectionTitle": "How We Deliver Packaging Excellence",
+            "processSectionText": "Each order follows a standardized quality production pipeline ensuring flawless protection and precision.",
+            "treatmentPrefix": "Solution",
+            "contactHref": "#contact",
+            "supportTitle": "Get the Right Packaging for Your Brand",
+            "supportButton": {
+              "label": "Get a Quote",
+              "href": "#contact"
+            },
+            "features": [
+              {
+                "icon": "check-circle",
+                "title": "Custom structural design",
+                "text": [
+                  "Custom structural",
+                  "design"
+                ]
+              },
+              {
+                "icon": "check-circle",
+                "title": "Premium grade paper materials",
+                "text": [
+                  "Premium grade",
+                  "paper materials"
+                ]
+              },
+              {
+                "icon": "check-circle",
+                "title": "Eco-friendly and recyclable",
+                "text": [
+                  "Eco-friendly and",
+                  "recyclable"
+                ]
+              },
+              {
+                "icon": "check-circle",
+                "title": "Strict quality control",
+                "text": [
+                  "Strict quality",
+                  "control"
+                ]
+              }
+            ],
+            "whyEyebrow": "Our Process",
+            "whyTitle": "Our Production",
+            "whySuffix": "Workflow",
+            "why": [
+              {
+                "icon": "stethoscope",
+                "title": "Consultation & Sizing",
+                "text": "We review your product specifications and packaging requirements."
+              },
+              {
+                "icon": "clock",
+                "title": "Sample & Prototyping",
+                "text": "Rapid prototype sample creation to verify fit and strength."
+              },
+              {
+                "icon": "microscope",
+                "title": "Manufacturing",
+                "text": "High-speed precision corrugation and die-cutting."
+              },
+              {
+                "icon": "check-circle",
+                "title": "Quality Inspection & Dispatch",
+                "text": "Thorough quality checks followed by on-time delivery."
+              }
+            ],
+            "formTitle": "Request a Custom Quote",
+            "formText": "Have a specific packaging requirement? Reach out to our team for quick assistance and tailored solutions.",
+            "relatedTitle": "Our Packaging Solutions"
+          }
+        }
+      },
+      "Process": {
+        "variants": {
+          "InsuranceProcess1": {
+            "eyebrow": "How We Work",
+            "title": "Our Production",
+            "highlight": "Process",
+            "text": "From concept to delivery, we provide end-to-end packaging solutions tailored to your business needs.",
+            "button": {
+              "label": "Get a Quote",
+              "href": "#contact"
+            },
+            "steps": [
+              {
+                "icon": "stethoscope",
+                "title": "Requirement & Consultation",
+                "text": [
+                  "We analyze your",
+                  "packaging dimensions,",
+                  "material needs, and",
+                  "load requirements."
+                ]
+              },
+              {
+                "icon": "calendar-check",
+                "title": "Design & Prototyping",
+                "text": [
+                  "Custom structural",
+                  "design and sample",
+                  "fitting for your",
+                  "approval."
+                ]
+              },
+              {
+                "icon": "microscope",
+                "title": "Manufacturing & Printing",
+                "text": [
+                  "High-speed corrugation,",
+                  "precision die-cutting,",
+                  "and custom branding."
+                ]
+              },
+              {
+                "icon": "baby",
+                "title": "Quality Check & Delivery",
+                "text": [
+                  "Stringent strength",
+                  "testing and on-time",
+                  "dispatch to your",
+                  "facility."
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "Stats": {
+        "variants": {
+          "InsuranceStats1": {
+            "items": [
+              {
+                "icon": "users-three",
+                "value": "10+",
+                "label": "Years of Excellence"
+              },
+              {
+                "icon": "file-text",
+                "value": "50K+",
+                "label": "Orders Delivered"
+              },
+              {
+                "icon": "shield-badge",
+                "value": "500+",
+                "label": "Business Clients"
+              },
+              {
+                "icon": "star",
+                "value": "100%",
+                "label": "Recyclable & Eco-Friendly"
+              }
+            ]
+          }
+        }
+      },
+      "Testimonials": {
+        "variants": {
+          "InsuranceTestimonials1": {
+            "heroTitle": "Testimonials",
+            "ariaLabel": "Client testimonials",
+            "eyebrow": "Testimonials",
+            "title": "What Our",
+            "highlight": "Clients Say",
+            "storyLabel": "Client testimonial",
+            "ratingLabel": "Five-star rating",
+            "previousLabel": "Previous testimonial",
+            "nextLabel": "Next testimonial",
+            "loadingLabel": "Loading testimonials",
+            "showLabelTemplate": "Show testimonial {number}",
+            "text": "Trusted by businesses for reliable, high-quality packaging solutions.",
+            "items": [
+              {
+                "name": "Rahul Mehta",
+                "city": "Operations Head",
+                "treatment": "Corrugated Packaging",
+                "rating": 5,
+                "image": "/images/customer-michel.webp",
+                "imageAlt": "Portrait representing Rahul Mehta's testimonial",
+                "quote": "Excellent quality and timely delivery. Their packaging solutions have added real value to our products."
+              },
+              {
+                "name": "Neha Sharma",
+                "city": "Purchase Manager",
+                "treatment": "Kraft Paper Solutions",
+                "rating": 5,
+                "image": "/images/customer-theresa.webp",
+                "imageAlt": "Portrait representing Neha Sharma's testimonial",
+                "quote": "A reliable partner for all our paper and packaging needs. The quality, service, and support are outstanding."
+              },
+              {
+                "name": "Amit Verma",
+                "city": "Director",
+                "treatment": "Custom Packaging",
+                "rating": 5,
+                "image": "/images/customer-william.webp",
+                "imageAlt": "Portrait representing Amit Verma's testimonial",
+                "quote": "Consistent quality, great customization options, and a professional team. Highly recommended!"
+              },
+              {
+                "name": "Priya Kapoor",
+                "city": "Business Owner",
+                "treatment": "Paper Bags",
+                "rating": 5,
+                "image": "/images/customer-theresa.webp",
+                "imageAlt": "Portrait representing Priya Kapoor's testimonial",
+                "quote": "We are very happy with the packaging quality. The products are durable, well-designed, and delivered on time."
+              },
+              {
+                "name": "Arjun Malhotra",
+                "city": "Supply Chain Manager",
+                "treatment": "Custom Packaging",
+                "rating": 5,
+                "image": "/images/customer-michel.webp",
+                "imageAlt": "Portrait representing Arjun Malhotra's testimonial",
+                "quote": "Their customized packaging solutions perfectly match our business requirements. Great experience overall."
+              },
+              {
+                "name": "Ananya Gupta",
+                "city": "Retail Manager",
+                "treatment": "Paper Bags",
+                "rating": 5,
+                "image": "/images/customer-william.webp",
+                "imageAlt": "Portrait representing Ananya Gupta's testimonial",
+                "quote": "Excellent customer support and premium packaging quality. We look forward to continuing our partnership."
+              }
+            ]
+          }
+        }
+      },
+      "Cta": {
+        "variants": {
+          "InsuranceCta1": {
+            "eyebrow": "Custom Packaging Solutions",
+            "title": [
+              "High-Quality Packaging",
+              "For Your Business"
+            ],
+            "text": "Need custom corrugated boxes, kraft paper, or eco-friendly paper bags? Contact BOXNEXA today for dependable packaging solutions.",
+            "image": "/images/contact-packaging.webp",
+            "button": {
+              "label": "Get a Quote",
+              "href": "#contact"
+            }
+          }
+        }
+      },
+      "Blog": {
+        "variants": {
+          "InsuranceBlog1": {
+            "heroTitle": "Blog & News",
+            "readLabel": "Read Article",
+            "readAriaLabelTemplate": "Read {title}",
+            "eyebrow": "Packaging Insights",
+            "title": "Latest Trends and",
+            "highlight": "Packaging Industry Insights",
+            "text": "Explore the latest innovations in sustainable packaging, corrugated box design, and eco-friendly paper materials.",
+            "buttonLabel": "Explore All Articles",
+            "homeCount": 3,
+            "categoryLabel": "Showing posts in",
+            "allPostsLabel": "View all posts",
+            "posts": [
+              {
+                "slug": "sustainable-packaging-trends-2026",
+                "category": "Sustainable Packaging",
+                "date": "Nov 15, 2026",
+                "title": "Sustainable Packaging Trends: The Future of Eco-Friendly Materials",
+                "titleLines": [
+                  "Sustainable Packaging Trends:",
+                  "The Future of Eco-Friendly Materials"
+                ],
+                "text": "Discover how eco-friendly paper bags and recyclable corrugated packaging are transforming modern supply chains.",
+                "image": "/images/corrugated-packaging.webp",
+                "imageAlt": "Sustainable corrugated packaging boxes",
+                "detail": {
+                  "image": "/images/corrugated-packaging.webp",
+                  "imageAlt": "Sustainable corrugated packaging boxes",
+                  "comments": 3,
+                  "intro": "Businesses worldwide are prioritizing eco-friendly packaging materials to reduce environmental impact while maintaining product safety.",
+                  "sections": [
+                    {
+                      "title": "Rising Demand for",
+                      "highlight": "Eco-Friendly Materials",
+                      "text": "Paper packaging provides high durability and complete recyclability, meeting consumer demand for sustainable brand practices."
+                    },
+                    {
+                      "title": "Reducing Waste with",
+                      "highlight": "Optimized Sizing",
+                      "text": "Custom-sized corrugated boxes eliminate excess filler materials, reducing shipping costs and carbon footprints."
+                    },
+                    {
+                      "title": "Brand Value of",
+                      "highlight": "Green Packaging",
+                      "text": "Consumers actively choose brands that demonstrate environmental stewardship through recyclable kraft paper and paper bags."
+                    }
+                  ],
+                  "tip": {
+                    "title": "Pro Tip for Businesses",
+                    "text": "Switching to standardized recyclable paper packaging reduces fulfillment costs and strengthens customer loyalty."
+                  }
+                }
+              },
+              {
+                "slug": "choosing-right-corrugated-box",
+                "category": "Corrugated Packaging",
+                "date": "Nov 10, 2026",
+                "title": "How to Choose the Right Corrugated Box for Shipping",
+                "titleLines": [
+                  "How to Choose the Right",
+                  "Corrugated Box for Shipping"
+                ],
+                "text": "Learn the differences between single, double, and triple wall corrugated boxes to ensure maximum transit protection.",
+                "image": "/images/corrugated-boxes.webp",
+                "imageAlt": "Corrugated boxes for logistics and shipping",
+                "detail": {
+                  "image": "/images/corrugated-boxes.webp",
+                  "imageAlt": "Corrugated boxes for logistics and shipping",
+                  "comments": 5,
+                  "intro": "Selecting the right box strength protects your products against compression, impact, and moisture during freight transit.",
+                  "sections": [
+                    {
+                      "title": "Understanding",
+                      "highlight": "Wall Types",
+                      "text": "Single wall boxes are ideal for lightweight retail goods, while double and triple wall boxes handle heavy industrial machinery and fragile items."
+                    },
+                    {
+                      "title": "Edge Crush Test",
+                      "highlight": "and Burst Strength",
+                      "text": "Knowing the ECT rating ensures your boxes can stack securely in warehouses without collapsing."
+                    },
+                    {
+                      "title": "Custom Inserts and",
+                      "highlight": "Cushioning",
+                      "text": "Complementing boxes with custom inserts prevents product movement and transit shock."
+                    }
+                  ],
+                  "tip": {
+                    "title": "Storage Tip",
+                    "text": "Store corrugated boxes in a dry, climate-controlled space to maintain maximum structural rigidity."
+                  }
+                }
+              },
+              {
+                "slug": "kraft-paper-packaging-benefits",
+                "category": "Kraft Paper",
+                "date": "Nov 05, 2026",
+                "title": "The Versatility and Strength of Kraft Paper in Modern Packaging",
+                "titleLines": [
+                  "The Versatility and Strength of",
+                  "Kraft Paper in Modern Packaging"
+                ],
+                "text": "Why high-strength kraft paper remains the gold standard for durable wrapping, cushioning, and heavy-duty bags.",
+                "image": "/images/kraft-paper-service.webp",
+                "imageAlt": "Kraft paper packaging solutions",
+                "detail": {
+                  "image": "/images/kraft-paper-service.webp",
+                  "imageAlt": "Kraft paper packaging solutions",
+                  "comments": 4,
+                  "intro": "Kraft paper's unique fiber composition delivers unmatched tear resistance, making it an indispensable asset across multiple industries.",
+                  "sections": [
+                    {
+                      "title": "High Tensile",
+                      "highlight": "Strength",
+                      "text": "Natural unbleached kraft paper withstands high tension and pressure, making it ideal for packaging bulk materials."
+                    },
+                    {
+                      "title": "Biodegradable and",
+                      "highlight": "Recyclable",
+                      "text": "Kraft paper decomposes naturally and can be recycled multiple times without losing structural integrity."
+                    },
+                    {
+                      "title": "Versatile Across",
+                      "highlight": "Industries",
+                      "text": "From food service and retail bags to industrial wrapping, kraft paper adapts seamlessly to diverse packaging needs."
+                    }
+                  ],
+                  "tip": {
+                    "title": "Sustainability Note",
+                    "text": "Natural virgin kraft paper is food-safe and ideal for both direct contact and outer protective wrapping."
+                  }
+                }
+              },
+              {
+                "slug": "custom-packaging-elevating-brand-experience",
+                "category": "Custom Packaging",
+                "date": "Oct 28, 2026",
+                "title": "Custom Packaging: Elevating Your Brand Experience and Customer Loyalty",
+                "titleLines": [
+                  "Custom Packaging: Elevating",
+                  "Your Brand Experience"
+                ],
+                "text": "How custom-printed boxes and branded packaging create an unforgettable unboxing experience.",
+                "image": "/images/custom-packaging-service.webp",
+                "detail": {
+                  "image": "/images/custom-packaging-service.webp",
+                  "imageAlt": "Custom designed packaging box",
+                  "comments": 6,
+                  "intro": "In an e-commerce-driven world, your packaging is often the very first tangible touchpoint a customer has with your brand.",
+                  "sections": [
+                    {
+                      "title": "The Unboxing",
+                      "highlight": "Experience",
+                      "text": "Thoughtful design, premium print finishes, and precision dimensions turn everyday delivery into a memorable customer moment."
+                    },
+                    {
+                      "title": "Reinforcing Brand",
+                      "highlight": "Identity",
+                      "text": "Consistent brand colors, logos, and custom messaging foster strong brand recognition and trust."
+                    },
+                    {
+                      "title": "Protection Meets",
+                      "highlight": "Aesthetics",
+                      "text": "Custom packaging guarantees that beauty does not compromise structural durability or transit safety."
+                    }
+                  ],
+                  "tip": {
+                    "title": "Design Insight",
+                    "text": "Pair minimalist exterior branding with an engaging interior print for a high-end unboxing reveal."
+                  }
+                }
+              },
+              {
+                "slug": "retail-paper-bags-vs-plastic",
+                "category": "Retail Solutions",
+                "date": "Oct 18, 2026",
+                "title": "Retail Paper Bags: The Sustainable Alternative to Single-Use Plastic",
+                "titleLines": [
+                  "Retail Paper Bags: The",
+                  "Sustainable Alternative"
+                ],
+                "text": "Why leading retail and food brands are adopting durable kraft paper bags for sustainable customer convenience.",
+                "image": "/images/paper-bags.webp",
+                "detail": {
+                  "image": "/images/paper-bags.webp",
+                  "imageAlt": "Retail paper bags with twisted handles",
+                  "comments": 2,
+                  "intro": "With regulatory bans on single-use plastics and growing consumer eco-awareness, premium paper bags have become an industry standard.",
+                  "sections": [
+                    {
+                      "title": "Superior Weight",
+                      "highlight": "Capacity",
+                      "text": "Modern twisted handle and flat handle kraft paper bags carry substantial weight without tearing."
+                    },
+                    {
+                      "title": "Walking",
+                      "highlight": "Billboards",
+                      "text": "Custom printed paper bags turn every shopper into a mobile brand ambassador across shopping districts."
+                    },
+                    {
+                      "title": "Eco-Friendly",
+                      "highlight": "Disposal",
+                      "text": "Customers readily reuse high-quality paper bags at home before easily recycling them."
+                    }
+                  ],
+                  "tip": {
+                    "title": "Retail Tip",
+                    "text": "Reinforced bottom gussets ensure bags stand upright on checkout counters for swift packing."
+                  }
+                }
+              },
+              {
+                "slug": "industrial-packaging-logistics-efficiency",
+                "category": "Industrial Packaging",
+                "date": "Oct 05, 2026",
+                "title": "Industrial Packaging: Safeguarding Heavy Cargo and Optimizing Logistics",
+                "titleLines": [
+                  "Industrial Packaging:",
+                  "Safeguarding Heavy Cargo"
+                ],
+                "text": "How heavy-duty corrugated cartons and palletized packaging streamline warehouse logistics and minimize freight damage.",
+                "image": "/images/custom-packaging.webp",
+                "detail": {
+                  "image": "/images/custom-packaging.webp",
+                  "imageAlt": "Heavy-duty industrial packaging boxes",
+                  "comments": 7,
+                  "intro": "Damaged cargo in transit directly impacts profitability and client relationships. Robust industrial packaging prevents costly loss.",
+                  "sections": [
+                    {
+                      "title": "Standardized",
+                      "highlight": "Pallet Sizing",
+                      "text": "Designing box dimensions to match standard pallet footprints maximizes container volume and lowers freight costs."
+                    },
+                    {
+                      "title": "Moisture and Humidity",
+                      "highlight": "Protection",
+                      "text": "Treated kraft linerboards protect inner contents from atmospheric humidity and sea-freight condensation."
+                    },
+                    {
+                      "title": "Reinforced Corner and",
+                      "highlight": "Edge Strength",
+                      "text": "Edge protectors and reinforced corners distribute strapping tension and prevent carton crushing."
+                    }
+                  ],
+                  "tip": {
+                    "title": "Logistics Advice",
+                    "text": "Perform drop and vibration tests during prototyping to ensure packaging withstands multi-modal transit."
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "BlogDetail": {
+        "variants": {
+          "InsuranceBlogDetail1": {
+            "bannerTitle": "Packaging Insights",
+            "author": "By BOXNEXA Team",
+            "commentsLabel": "Comments",
+            "latestTitle": "Latest Articles",
+            "categoriesTitle": "Packaging Insights"
+          }
+        }
+      },
+      "EnquiryForm": {
+        "variants": {
+          "InsuranceEnquiryForm1": {
+            "name": "Your Name *",
+            "email": "Your Email *",
+            "phone": "Phone Number",
+            "plan": "Packaging Requirement *",
+            "planShort": "Select packaging type",
+            "message": "Your Message *",
+            "submit": "Send Message",
+            "note": "Your information is handled securely and confidentially by BOXNEXA."
+          }
+        }
+      },
+      "EnquirePage": {
+        "variants": {
+          "InsuranceEnquirePage1": {
+            "eyebrow": "Get a Quote",
+            "title": [
+              "Request Custom",
+              "Packaging"
+            ],
+            "highlight": "Solutions.",
+            "text": "Have a requirement or a question? Reach out to our team for quick assistance and the right packaging solution.",
+            "points": [
+              {
+                "icon": "heart",
+                "title": "Custom Solutions",
+                "text": [
+                  "Tailored packaging designed for your products."
+                ]
+              },
+              {
+                "icon": "shield-check",
+                "title": "Premium Quality",
+                "text": [
+                  "High-durability, eco-friendly materials."
+                ]
+              },
+              {
+                "icon": "calendar",
+                "title": "Timely Delivery",
+                "text": [
+                  "Reliable fulfillment and dependable supply."
+                ]
+              }
+            ],
+            "formTitle": "Send Us a",
+            "formHighlight": "Message",
+            "formText": "Complete the form to request your packaging quote."
+          }
+        }
+      },
+      "ContactPage": {
+        "variants": {
+          "InsuranceContactPage1": {
+            "eyebrow": "Contact Us",
+            "title": [
+              "Get in",
+              "Touch"
+            ],
+            "highlight": "",
+            "text": "Have a requirement or a question? Reach out to our team for quick assistance and the right packaging solution.",
+            "cards": [
+              {
+                "icon": "phone-solid",
+                "title": "Call Us",
+                "field": "phones"
+              },
+              {
+                "icon": "mail-solid",
+                "title": "Email Us",
+                "field": "emails"
+              },
+              {
+                "icon": "pin-solid",
+                "title": "Visit Us",
+                "field": "address"
+              }
+            ],
+            "formTitle": "Send Us a",
+            "formHighlight": "Message",
+            "formText": "Have a requirement or a question? Reach out to our team for quick assistance and the right packaging solution.",
+            "location": {
+              "mapCard": {
+                "title": "Our Location",
+                "field": "address"
+              }
+            },
+            "hero": {
+              "breadcrumbLabel": "Breadcrumb",
+              "image": {
+                "src": "/images/contact-packaging.webp",
+                "alt": "BOXNEXA paper packaging boxes and kraft paper"
+              },
+              "heading": "Contact Us",
+              "homeLabel": "Home",
+              "homeHref": "/",
+              "currentLabel": "Contact Us"
+            },
+            "form": {
+              "heading": "Send Us a Message",
+              "mobileEyebrow": "Contact Us",
+              "requiredMarker": "*",
+              "emailLabel": "Email Us",
+              "emailValue": "info@XYZ.com",
+              "phoneLabel": "Call Us",
+              "phoneValue": "+1 00000000",
+              "backgroundImage": "/images/contact-packaging.webp",
+              "backgroundImageAlt": "BOXNEXA paper packaging boxes and kraft paper",
+              "homeDetails": {
+                "mailSubject": "New Packaging Enquiry from {name}",
+                "mailBody": "Name: {name}\nEmail: {email}\nPhone: {phone}\n\nMessage:\n{message}",
+                "phoneFallback": "Not provided",
+                "submittedMessage": "Your email application should open with your enquiry."
+              },
+              "fields": {
+                "firstName": {
+                  "label": "Your Name *",
+                  "placeholder": "Your Name *"
+                },
+                "lastName": {
+                  "label": "Company Name",
+                  "placeholder": "Your Company Name"
+                },
+                "email": {
+                  "label": "Your Email *",
+                  "placeholder": "Your Email *"
+                },
+                "phone": {
+                  "label": "Phone Number",
+                  "placeholder": "Phone Number",
+                  "countryButtonLabel": "Choose country calling code"
+                },
+                "message": {
+                  "label": "Your Message *",
+                  "placeholder": "Your Message *"
+                }
+              },
+              "countries": [
+                {
+                  "code": "+91",
+                  "name": "India"
+                },
+                {
+                  "code": "+1",
+                  "name": "United States"
+                },
+                {
+                  "code": "+44",
+                  "name": "United Kingdom"
+                },
+                {
+                  "code": "+61",
+                  "name": "Australia"
+                },
+                {
+                  "code": "+971",
+                  "name": "UAE"
+                }
+              ],
+              "submitLabel": "Send Message",
+              "successTitle": "Thank you!",
+              "successText": [
+                "Your email application should open with your enquiry.",
+                "Our team will get back to you shortly with the right packaging solution."
+              ],
+              "successButton": "Send Another Message"
+            }
+          }
+        }
+      },
+      "ThankYouPage": {
+        "variants": {
+          "InsuranceThankYouPage1": {
+            "pageTitle": "Thank You",
+            "title": "Thank",
+            "highlight": "You!",
+            "subtitle": "Thank you for contacting BOXNEXA!",
+            "text": [
+              "Your enquiry has been received successfully.",
+              "Our packaging specialists will review your requirements and reach out promptly."
+            ],
+            "primaryButton": {
+              "label": "Back to Home",
+              "href": "/"
+            },
+            "secondaryButton": {
+              "label": "Explore Products",
+              "href": "#products"
+            },
+            "points": [
+              {
+                "icon": "heart",
+                "title": "Custom Solutions",
+                "text": [
+                  "Tailored packaging designed for your products."
+                ]
+              },
+              {
+                "icon": "shield-check",
+                "title": "Premium Quality",
+                "text": [
+                  "High-durability, eco-friendly materials."
+                ]
+              },
+              {
+                "icon": "monitor-check",
+                "title": "Trusted Expertise",
+                "text": [
+                  "Years of paper packaging excellence."
+                ]
+              },
+              {
+                "icon": "users-round",
+                "title": "Timely Delivery",
+                "text": [
+                  "Dependable fulfillment for your business."
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "FaqPage": {
+        "variants": {
+          "InsuranceFaqPage1": {
+            "title": "Frequently Asked Questions",
+            "intro": "Answers to common questions about BOXNEXA paper and packaging solutions, customization, orders, and delivery.",
+            "items": [
+              {
+                "question": "What types of packaging products does BOXNEXA manufacture?",
+                "answer": "BOXNEXA specializes in high-quality corrugated boxes, kraft paper rolls and sheets, paper bags, and bespoke custom packaging solutions for diverse industries."
+              },
+              {
+                "question": "Can I order custom-sized and branded boxes?",
+                "answer": "Yes, we provide fully customizable packaging tailored to your exact dimensions, ply strengths, and custom printing requirements to showcase your brand."
+              },
+              {
+                "question": "Are your paper packaging products eco-friendly and recyclable?",
+                "answer": "Yes, our paper and corrugated packaging solutions are 100% recyclable, biodegradable, and manufactured using sustainable materials."
+              },
+              {
+                "question": "How do I request a quote or place a bulk order?",
+                "answer": "You can contact our team directly via phone at +1 00000000, email us at info@XYZ.com, or submit your requirements through our contact form."
+              }
+            ]
+          }
+        }
+      },
+      "PolicyPages": {
+        "variants": {
+          "InsurancePolicyPages1": {
+            "contactPrompt": "Questions? Contact us at info@XYZ.com",
+            "privacy": {
+              "intro": "Your trust matters to us. This policy explains how BOXNEXA handles information you choose to share when you visit our website or contact our team.",
+              "sections": [
+                {
+                  "title": "Information you share",
+                  "text": "When you submit an enquiry or contact us, we may receive details such as your name, phone number, email address, and the packaging specifications you include in your message."
+                },
+                {
+                  "title": "How we use information",
+                  "text": "We use your details to respond to packaging enquiries, process custom quote requests, provide customer support, and communicate about our services."
+                },
+                {
+                  "title": "Data protection",
+                  "text": "We take reasonable precautions to protect the information you submit through our website from unauthorized access, alteration, or disclosure."
+                },
+                {
+                  "title": "Third-party services",
+                  "text": "We may use trusted service providers for web hosting, analytics, or communication who process information according to confidentiality commitments."
+                },
+                {
+                  "title": "Product information",
+                  "text": "Website content provides general information about our packaging solutions and capabilities. Final product specifications and terms govern any order."
+                }
+              ]
+            },
+            "terms": {
+              "intro": "These terms apply when you access the BOXNEXA website. By using the site, you agree to use it lawfully and in accordance with these terms.",
+              "sections": [
+                {
+                  "title": "Website information",
+                  "text": "We aim to keep product and service information accurate and up to date, but specifications and details are provided for general guidance and may be updated."
+                },
+                {
+                  "title": "Insurance applications and cover",
+                  "text": "Custom packaging orders are subject to confirmed quotations, technical specifications, order quantities, and agreed delivery schedules."
+                },
+                {
+                  "title": "Acceptable use",
+                  "text": "You must not misuse this website, attempt to gain unauthorized access, disrupt its operation, or submit information that is unlawful or belongs to another person without permission."
+                },
+                {
+                  "title": "Content and external websites",
+                  "text": "Website text, branding, and materials belong to BOXNEXA or their respective owners. Links to other websites are provided for convenience; we do not control and are not responsible for their content or practices."
+                },
+                {
+                  "title": "Changes and contact",
+                  "text": "We may update these terms as our business and services evolve. Continued use of the site after an update means you accept the revised terms. For questions, contact info@XYZ.com."
+                }
+              ]
+            },
+            "cookies": {
+              "intro": "Cookies are small files that a website can store in your browser. This page describes how cookies support your visit to the BOXNEXA website.",
+              "sections": [
+                {
+                  "title": "Why cookies may be used",
+                  "text": "Cookies help the website function smoothly, remember preferences, and analyze traffic to enhance user experience."
+                },
+                {
+                  "title": "Managing cookies",
+                  "text": "Most browsers let you review, block, or delete cookies in their privacy or site settings. Blocking some cookies may affect how parts of a website work."
+                },
+                {
+                  "title": "Third-party services",
+                  "text": "External analytics or embedded tools may place cookies governed by their respective privacy policies."
+                },
+                {
+                  "title": "Updates",
+                  "text": "We may update this cookie policy when website features change. Inquiries can be sent to info@XYZ.com."
+                }
+              ]
+            }
+          }
+        }
+      },
+      "SitemapPage": {
+        "variants": {
+          "InsuranceSitemapPage1": {
+            "pagesTitle": "Pages",
+            "policiesTitle": "Policies"
+          }
+        }
+      },
+      "Footer": {
+        "variants": {
+          "InsuranceFooter1": {
+            "ariaLabel": "Website footer",
+            "policyAriaLabel": "Legal and policy links",
+            "about": "Reliable and customizable paper packaging solutions for businesses across diverse industries.",
+            "columns": [
+              {
+                "title": "Quick Links",
+                "source": "links",
+                "links": [
+                  {
+                    "label": "Home",
+                    "href": "/"
+                  },
+                  {
+                    "label": "About Us",
+                    "href": "#about"
+                  },
+                  {
+                    "label": "Industries",
+                    "href": "#industries"
+                  },
+                  {
+                    "label": "Contact Us",
+                    "href": "#contact"
+                  }
+                ]
+              },
+              {
+                "title": "Our Services",
+                "source": "plans",
+                "links": [
+                  {
+                    "label": "Corrugated Packaging",
+                    "href": "/services/corrugated-packaging"
+                  },
+                  {
+                    "label": "Kraft Paper Solutions",
+                    "href": "/services/kraft-paper"
+                  },
+                  {
+                    "label": "Paper Bags",
+                    "href": "/services/paper-bags"
+                  },
+                  {
+                    "label": "Custom Packaging",
+                    "href": "/services/custom-packaging"
+                  },
+                  {
+                    "label": "Corrugated Boxes",
+                    "href": "/products/corrugated-boxes"
+                  }
+                ]
+              }
+            ],
+            "contactTitle": "Contact Info",
+            "contactDetails": [
+              {
+                "title": "Call Us",
+                "value": "+1 00000000",
+                "href": "tel:+911140197514",
+                "icon": "phone"
+              },
+              {
+                "title": "Email Us",
+                "value": "info@XYZ.com",
+                "href": "mailto:info@XYZ.com",
+                "icon": "mail"
+              },
+              {
+                "title": "Our Location",
+                "value": "742 Evergreen Terrace (or 123 Main St), Springfield, IL (Illinois), 62704, United States",
+                "href": "https://www.google.com/maps/search/?api=1&query=47+Shardhanand+Marg+G.B.+Road+Delhi+110006",
+                "icon": "map-pin"
+              }
+            ],
+            "contact": [
+              {
+                "icon": "pin-solid",
+                "field": "address"
+              },
+              {
+                "icon": "phone-solid",
+                "field": "phone"
+              },
+              {
+                "icon": "mail-solid",
+                "field": "email"
+              },
+              {
+                "icon": "clock",
+                "field": "hoursShort"
+              }
+            ],
+            "copyright": "Copyright © 2026. All Rights Reserved. Powered By Lestow."
+          }
+        }
+      },
+      "Industries": {
+        "variants": {
+          "InsuranceIndustries1": {
+            "eyebrow": "Industries We Serve",
+            "title": "Packaging Solutions for",
+            "highlight": "Diverse Industries",
+            "description": "Reliable and customized paper packaging for a wide range of industry applications.",
+            "items": [
+              {
+                "id": 1,
+                "title": "Retail &",
+                "subtitle": "E-Commerce",
+                "icon": "shopping-cart",
+                "href": "/industries/retail-ecommerce"
+              },
+              {
+                "id": 2,
+                "title": "Food &",
+                "subtitle": "Beverage",
+                "icon": "concierge-bell",
+                "href": "/industries/food-beverage"
+              },
+              {
+                "id": 3,
+                "title": "Pharmaceutical",
+                "subtitle": "& Healthcare",
+                "icon": "pill",
+                "href": "/industries/pharmaceutical-healthcare"
+              },
+              {
+                "id": 4,
+                "title": "Automotive",
+                "subtitle": "& Engineering",
+                "icon": "car-front",
+                "href": "/industries/automotive-engineering"
+              },
+              {
+                "id": 5,
+                "title": "FMCG &",
+                "subtitle": "Consumer Goods",
+                "icon": "package",
+                "href": "/industries/fmcg-consumer-goods"
+              },
+              {
+                "id": 6,
+                "title": "Electronics",
+                "subtitle": "& Appliances",
+                "icon": "laptop",
+                "href": "/industries/electronics-appliances"
+              },
+              {
+                "id": 7,
+                "title": "Publishing",
+                "subtitle": "& Stationery",
+                "icon": "book-open",
+                "href": "/industries/publishing-stationery"
+              },
+              {
+                "id": 8,
+                "title": "Manufacturing",
+                "subtitle": "& Industrial",
+                "icon": "factory",
+                "href": "/industries/manufacturing-industrial"
+              }
+            ]
+          }
+        }
+      },
+      "Homecare": {
+        "variants": {
+          "InsuranceHomecare1": {
+            "image": "/images/about-factory.webp",
+            "imageAlt": "BOXNEXA paper manufacturing and packaging facility",
+            "title": [
+              "Dedicated to Providing the Best",
+              "Paper & Packaging Solutions."
+            ],
+            "tagline": "Packaging that protects, presents, and adds value"
+          }
+        }
+      },
+      "Team": {
+        "variants": {
+          "InsuranceTeam1": {
+            "heroTitle": "Our Team",
+            "eyebrow": "Our Experts",
+            "title": "The Team Behind BOXNEXA",
+            "members": [
+              {
+                "name": "Operations Head",
+                "role": "Production & Quality Control",
+                "image": "/images/customer-michel.webp",
+                "imageAlt": "Production & Quality Control",
+                "href": "#contact",
+                "linkLabel": "Contact our operations team"
+              },
+              {
+                "name": "Purchase Manager",
+                "role": "Procurement & Raw Materials",
+                "image": "/images/customer-theresa.webp",
+                "imageAlt": "Procurement & Raw Materials",
+                "href": "#contact",
+                "linkLabel": "Contact our procurement team"
+              },
+              {
+                "name": "Technical Director",
+                "role": "Packaging Engineering",
+                "image": "/images/customer-william.webp",
+                "imageAlt": "Packaging Engineering",
+                "href": "#contact",
+                "linkLabel": "Contact our engineering team"
+              },
+              {
+                "name": "Supply Chain Manager",
+                "role": "Logistics & Client Support",
+                "image": "/images/customer-michel.webp",
+                "imageAlt": "Logistics & Client Support",
+                "href": "#contact",
+                "linkLabel": "Contact our supply chain team"
+              }
+            ]
+          }
+        }
+      },
+      "Gallery": {
+        "variants": {
+          "InsuranceGallery1": {
+            "title": [
+              "Our Packaging Gallery"
+            ],
+            "items": [
+              {
+                "src": "/images/about-factory.webp",
+                "alt": "BOXNEXA paper manufacturing facility"
+              },
+              {
+                "src": "/images/corrugated-packaging.webp",
+                "alt": "Corrugated packaging solutions"
+              },
+              {
+                "src": "/images/kraft-paper-service.webp",
+                "alt": "Kraft paper solutions"
+              },
+              {
+                "src": "/images/paper-bags-service.webp",
+                "alt": "Paper bags packaging"
+              },
+              {
+                "src": "/images/custom-packaging-service.webp",
+                "alt": "Custom packaging solutions"
+              },
+              {
+                "src": "/images/contact-packaging.webp",
+                "alt": "BOXNEXA paper packaging boxes and kraft paper"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

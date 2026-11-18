@@ -10,36 +10,27 @@ import {
   X,
 } from "lucide-react";
 import Image from "next/image";
-
-const navLinks = [
-  { name: "Home", href: "/", active: true },
-  { name: "About Us", href: "#about" },
-  { name: "Services", href: "#services" },
-  { name: "Products", href: "#products" },
-  { name: "Industry We Serve", href: "#industries" },
-  { name: "Testimonials", href: "#testimonials" },
-  { name: "Contact Us", href: "#contact" },
-];
+import { headerData, standaloneSiteData } from "@/data";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white">
-      <nav className="relative mx-auto flex min-h-[90px] w-full items-center justify-between px-5 py-2 shadow-[0_3px_18px_rgba(0,0,0,0.035)] sm:px-8 lg:min-h-[112px] lg:px-10 xl:px-12">
+      <nav aria-label={headerData.ariaLabel} className="relative mx-auto flex min-h-[90px] w-full items-center justify-between px-5 py-2 shadow-[0_3px_18px_rgba(0,0,0,0.035)] sm:px-8 lg:min-h-[112px] lg:px-10 xl:px-12">
 
         
         <Link
-              href="/"
-              aria-label="BOXNEXA Home"
+              href={standaloneSiteData.homeHref}
+              aria-label={`${standaloneSiteData.name} ${standaloneSiteData.homeLabel}`}
               className="inline-flex"
             >
               <div
                 className="relative h-[100px] w-[250px] max-w-full sm:h-[95px] sm:w-[300px]"
               >
                 <Image
-                  src="/images/logo.webp"
-                  alt="BOXNEXA - Paper and Packaging Solutions"
+                  src={standaloneSiteData.logo}
+                  alt={standaloneSiteData.alt}
                   fill
                   sizes="(max-width: 640px) 300px, 380px"
                   className="object-contain object-left"
@@ -53,9 +44,9 @@ export default function Navbar() {
 
         {/* DESKTOP NAVIGATION */}
         <div className="hidden flex-1 items-center justify-center gap-5 xl:flex 2xl:gap-9">
-          {navLinks.map((link, index) => (
+          {headerData.links.map((link, index) => (
             <motion.div
-              key={link.name}
+              key={link.label}
               initial={{ opacity: 0, y: -12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
@@ -71,7 +62,7 @@ export default function Navbar() {
                     : "text-[#252a30] hover:text-[#d9840b]"
                 }`}
               >
-                {link.name}
+                {link.label}
 
                 <span
                   className={`absolute -bottom-1 left-0 h-[3px] rounded-full bg-[#e89519] transition-all duration-300 ${
@@ -87,13 +78,13 @@ export default function Navbar() {
 
         
         <Link
-          href="#contact"
+          href={headerData.button.href}
           className="group relative hidden shrink-0 items-center gap-3 overflow-hidden bg-[#e89519] px-7 py-[15px] text-[17px] font-bold text-white transition-all duration-300 hover:bg-[#c8790c] hover:shadow-[0_8px_25px_rgba(232,149,25,0.3)] xl:flex 2xl:px-9"
           style={{
             clipPath: "polygon(9% 0, 100% 0, 91% 100%, 0 100%)",
           }}
         >
-          <span className="relative z-10">Get a Quote</span>
+          <span className="relative z-10">{headerData.button.label}</span>
 
           <ArrowRight
             size={23}
@@ -106,7 +97,7 @@ export default function Navbar() {
         {/* MOBILE MENU BUTTON */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          aria-label={isOpen ? "Close menu" : "Open menu"}
+          aria-label={isOpen ? standaloneSiteData.mobileMenu.closeLabel : standaloneSiteData.mobileMenu.openLabel}
           aria-expanded={isOpen}
           className="flex h-11 w-11 items-center justify-center rounded-md bg-[#e89519] text-white transition-all duration-300 hover:bg-[#c8790c] xl:hidden"
         >
@@ -135,9 +126,9 @@ export default function Navbar() {
             className="absolute left-0 top-full w-full overflow-hidden border-t border-gray-100 bg-white shadow-xl xl:hidden"
           >
             <div className="mx-auto flex max-w-[1600px] flex-col py-5 px-5 sm:px-8 lg:px-12 xl:px-16">
-              {navLinks.map((link, index) => (
+              {headerData.links.map((link, index) => (
                 <motion.div
-                  key={link.name}
+                  key={link.label}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{
@@ -154,7 +145,7 @@ export default function Navbar() {
                         : "text-[#252a30] hover:text-[#e89519]"
                     }`}
                   >
-                    {link.name}
+                    {link.label}
 
                     <ArrowRight
                       size={17}
@@ -166,11 +157,11 @@ export default function Navbar() {
 
               {/* MOBILE CTA */}
               <Link
-                href="/contact"
+                href={headerData.mobileButton.href}
                 onClick={() => setIsOpen(false)}
                 className="mt-5 flex items-center justify-center gap-3 bg-[#e89519] px-6 py-4 font-bold text-white transition-all duration-300 hover:bg-[#c8790c]"
               >
-                Get a Quote
+                {headerData.mobileButton.label}
                 <ArrowRight size={20} />
               </Link>
             </div>

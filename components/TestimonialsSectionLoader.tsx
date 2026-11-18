@@ -2,6 +2,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import { testimonialsSectionData } from "@/data";
 
 const TestimonialsSection = dynamic(
   () => import("@/components/TestimonialsSection"),
@@ -10,7 +11,7 @@ const TestimonialsSection = dynamic(
     loading: () => (
       <section
         className="w-full min-h-[500px] bg-white"
-        aria-label="Loading testimonials"
+        aria-label={testimonialsSectionData.loadingLabel}
       />
     ),
   }

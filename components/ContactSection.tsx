@@ -9,36 +9,30 @@ import {
   Phone,
   Mail,
   ArrowRight,
-  Send,
   CheckCircle2,
 } from "lucide-react";
+import {
+  contactPageData,
+  enquiryFormContentData,
+  footerSectionData,
+  standaloneSiteData,
+} from "@/data";
 
-const contactDetails = [
-  {
-    id: 1,
-    title: "Our Location",
-    description: "47, Shardhanand Marg, G.B. Road, Delhi – 110006",
-    icon: MapPin,
-    href: "https://www.google.com/maps/search/?api=1&query=47+Shardhanand+Marg+G.B.+Road+Delhi+110006",
-  },
-  {
-    id: 2,
-    title: "Call Us",
-    description: "011-40197514 / 15",
-    icon: Phone,
-    href: "tel:+911140197514",
-  },
-  {
-    id: 3,
-    title: "Email Us",
-    description: "contact@boxnexa.com",
-    icon: Mail,
-    href: "mailto:contact@boxnexa.com",
-  },
-];
+const contactIcons = {
+  "map-pin": MapPin,
+  phone: Phone,
+  mail: Mail,
+};
 
 export default function ContactSection() {
   const reduceMotion = useReducedMotion();
+  const formContent = contactPageData.form;
+  const emailContent = formContent.homeDetails;
+  const contactDetails = [
+    footerSectionData.contactDetails[2],
+    footerSectionData.contactDetails[0],
+    footerSectionData.contactDetails[1],
+  ];
 
   const [formData, setFormData] = useState({
     name: "",
@@ -62,17 +56,18 @@ export default function ContactSection() {
     e.preventDefault();
 
     const subject = encodeURIComponent(
-      `New Packaging Enquiry from ${formData.name}`
+      emailContent.mailSubject.replace("{name}", formData.name)
     );
 
     const body = encodeURIComponent(
-      `Name: ${formData.name}\n` +
-      `Email: ${formData.email}\n` +
-      `Phone: ${formData.phone || "Not provided"}\n\n` +
-      `Message:\n${formData.message}`
+      emailContent.mailBody
+        .replace("{name}", formData.name)
+        .replace("{email}", formData.email)
+        .replace("{phone}", formData.phone || emailContent.phoneFallback)
+        .replace("{message}", formData.message)
     );
 
-    const mailtoLink = `mailto:contact@boxnexa.com?subject=${subject}&body=${body}`;
+    const mailtoLink = `${standaloneSiteData.mobileMenu.emailHref}?subject=${subject}&body=${body}`;
 
     window.location.href = mailtoLink;
     setSubmitted(true);
@@ -117,36 +112,35 @@ export default function ContactSection() {
               <span className="h-[5px] w-12 bg-[#e89519] sm:w-[65px]" />
 
               <span className="text-[13px] font-bold uppercase tracking-[3px] text-[#252a30] sm:text-[16px] sm:tracking-[4px]">
-                Contact Us
+                {contactPageData.eyebrow}
               </span>
             </div>
 
       
             <h2 className="text-[clamp(2.7rem,5vw,4.2rem)] font-bold leading-[1.12] tracking-[-1.5px] text-[#252a30]">
-              Get in{" "}
+              {contactPageData.title[0]}{" "}
               <span className="text-[#e89519]">
-                Touch
+                {contactPageData.title[1]}
               </span>
             </h2>
 
       
             <p className="mt-5 max-w-[650px] text-[16px] leading-[1.7] text-[#62676e] sm:text-[18px] lg:text-[20px]">
-              Have a requirement or a question? Reach out to our team
-              for quick assistance and the right packaging solution.
+              {contactPageData.text}
             </p>
 
       
             <div className="mt-8 space-y-4 sm:mt-9 sm:space-y-5">
 
               {contactDetails.map((item, index) => {
-                const Icon = item.icon;
+                const Icon = contactIcons[item.icon as keyof typeof contactIcons];
 
                 return (
                   <motion.a
-                    key={item.id}
+                    key={item.title}
                     href={item.href}
-                    target={item.id === 1 ? "_blank" : undefined}
-                    rel={item.id === 1 ? "noopener noreferrer" : undefined}
+                    target={item.icon === "map-pin" ? "_blank" : undefined}
+                    rel={item.icon === "map-pin" ? "noopener noreferrer" : undefined}
                     initial={
                       reduceMotion
                         ? false
@@ -182,7 +176,7 @@ export default function ContactSection() {
                       </h3>
 
                       <p className="mt-1 text-[14px] leading-[1.6] text-[#41464d] sm:text-[17px]">
-                        {item.description}
+                        {item.value}
                       </p>
                     </div>
 
@@ -221,8 +215,8 @@ export default function ContactSection() {
                 className="relative h-full w-full"
               >
                 <Image
-                  src="/images/contact-packaging.webp"
-                  alt="BOXNEXA paper packaging boxes and kraft paper"
+                  src={formContent.backgroundImage}
+                  alt={formContent.backgroundImageAlt}
                   fill
                   priority={false}
                   sizes="(max-width: 1024px) 100vw, 600px"
@@ -251,7 +245,7 @@ export default function ContactSection() {
 
       
             <h3 className="mb-7 text-[27px] font-bold tracking-[-1px] text-[#252a30] sm:mb-9 sm:text-[34px]">
-              Send Us a Message
+              {formContent.heading}
             </h3>
 
             <form
@@ -266,7 +260,7 @@ export default function ContactSection() {
                   <input
                     type="text"
                     name="name"
-                    placeholder="Your Name *"
+                    placeholder={enquiryFormContentData.name}
                     value={formData.name}
                     onChange={handleChange}
                     required
@@ -279,7 +273,7 @@ export default function ContactSection() {
                   <input
                     type="email"
                     name="email"
-                    placeholder="Your Email *"
+                    placeholder={enquiryFormContentData.email}
                     value={formData.email}
                     onChange={handleChange}
                     required
@@ -295,7 +289,7 @@ export default function ContactSection() {
                 <input
                   type="tel"
                   name="phone"
-                  placeholder="Phone Number"
+                  placeholder={enquiryFormContentData.phone}
                   value={formData.phone}
                   onChange={handleChange}
                   autoComplete="tel"
@@ -307,7 +301,7 @@ export default function ContactSection() {
               <div>
                 <textarea
                   name="message"
-                  placeholder="Your Message *"
+                  placeholder={enquiryFormContentData.message}
                   value={formData.message}
                   onChange={handleChange}
                   required
@@ -325,7 +319,7 @@ export default function ContactSection() {
                   whileTap={reduceMotion ? undefined : { scale: 0.97 }}
                   className="group inline-flex min-h-[60px] w-full items-center justify-center gap-4 rounded-[13px] bg-[#ed9410] px-8 py-4 text-[16px] font-bold text-white shadow-[0_8px_20px_rgba(237,148,16,0.16)] transition-all duration-300 hover:bg-[#d98208] sm:w-auto sm:min-w-[285px] sm:text-[18px]"
                 >
-                  <span>Send Message</span>
+                  <span>{enquiryFormContentData.submit}</span>
 
                   <ArrowRight
                     size={23}
@@ -342,7 +336,7 @@ export default function ContactSection() {
                   className="flex items-center gap-2 text-sm font-medium text-green-700"
                 >
                   <CheckCircle2 size={18} />
-                  Your email application should open with your enquiry.
+                  {emailContent.submittedMessage}
                 </p>
               )}
 

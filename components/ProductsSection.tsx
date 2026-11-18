@@ -11,40 +11,18 @@ import {
   Layers3,
   ArrowUpRight,
 } from "lucide-react";
+import { productsSectionData } from "@/data";
 
-const products = [
-  {
-    id: 1,
-    title: "Corrugated Boxes",
-    image: "/images/corrugated-boxes.webp",
-    icon: Box,
-    href: "/products/corrugated-boxes",
-  },
-  {
-    id: 2,
-    title: "Kraft Paper",
-    image: "/images/kraft-paper.webp",
-    icon: ScrollText,
-    href: "/products/kraft-paper",
-  },
-  {
-    id: 3,
-    title: "Paper Bags",
-    image: "/images/paper-bags.webp",
-    icon: ShoppingBag,
-    href: "/products/paper-bags",
-  },
-  {
-    id: 4,
-    title: "Custom Packaging",
-    image: "/images/custom-packaging.webp",
-    icon: Layers3,
-    href: "/products/custom-packaging",
-  },
-];
+const productIcons = {
+  box: Box,
+  scroll: ScrollText,
+  "shopping-bag": ShoppingBag,
+  layers: Layers3,
+};
 
 export default function ProductsSection() {
   const reduceMotion = useReducedMotion();
+  const content = productsSectionData.homeSection;
 
   const containerVariants = {
     hidden: {},
@@ -91,7 +69,7 @@ export default function ProductsSection() {
             <span className="h-[5px] w-10 bg-[#e89519] sm:w-[55px]" />
 
             <span className="text-[12px] font-bold uppercase tracking-[3px] text-[#252a30] sm:text-[16px] sm:tracking-[4px]">
-              Our Products
+              {content.eyebrow}
             </span>
 
             <span className="h-[5px] w-10 bg-[#e89519] sm:w-[55px]" />
@@ -105,9 +83,9 @@ export default function ProductsSection() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="text-[clamp(2rem,4.5vw,3.9rem)] font-bold leading-[1.2] tracking-[-1.5px] text-[#252a30]"
           >
-            Explore Our{" "}
+            {content.title}{" "}
             <span className="text-[#df901e]">
-              Packaging Products
+              {content.highlight}
             </span>
           </motion.h2>
 
@@ -119,8 +97,7 @@ export default function ProductsSection() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="mx-auto mt-5 max-w-5xl text-[15px] leading-[1.8] text-[#50565d] sm:text-[18px] lg:text-[21px]"
           >
-            High-quality, durable and customizable paper packaging
-            for a wide range of business needs.
+            {content.description}
           </motion.p>
         </div>
 
@@ -132,12 +109,12 @@ export default function ProductsSection() {
           viewport={{ once: true, amount: 0.15 }}
           className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5 xl:gap-6"
         >
-          {products.map((product) => {
-            const Icon = product.icon;
+          {productsSectionData.collections.map((product) => {
+            const Icon = productIcons[product.icon as keyof typeof productIcons];
 
             return (
               <motion.div
-                key={product.id}
+                key={product.number}
                 variants={cardVariants}
                 className="group h-full"
               >
@@ -151,7 +128,7 @@ export default function ProductsSection() {
 
                     <Image
                       src={product.image}
-                      alt={product.title}
+                      alt={product.alt}
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       className="object-contain p-2 transition-transform duration-700 ease-out group-hover:scale-110"
@@ -183,7 +160,7 @@ export default function ProductsSection() {
 
                     {/* PRODUCT TITLE */}
                     <h3 className="text-[18px] font-bold leading-[1.3] tracking-[-0.5px] text-[#252a30] transition-colors duration-300 group-hover:text-[#d88a17] sm:text-[21px] lg:text-[19px] xl:text-[21px]">
-                      {product.title}
+                      {product.homeTitle}
                     </h3>
                   </div>
 

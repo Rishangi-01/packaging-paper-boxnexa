@@ -11,37 +11,13 @@ import {
   ChevronRight,
   ArrowUpRight,
 } from "lucide-react";
+import { footerSectionData, standaloneSiteData } from "@/data";
 
-const quickLinks = [
-  { name: "Home", href: "/" },
-  { name: "About Us", href: "#about" },
-  { name: "Industries", href: "#industries" },
-  { name: "Contact Us", href: "#contact" },
-];
-
-const contactInfo = [
-  {
-    icon: MapPin,
-    text: (
-      <>
-        742 Evergreen Terrace (or 123 Main St),
-        <br />
-        Springfield, 62704, United States
-      </>
-    ),
-    href: "https://www.google.com/maps/search/?api=1&query=47+Shardhanand+Marg+G.B.+Road+Delhi+110006",
-  },
-  {
-    icon: Phone,
-    text: "+1 00000000",
-    href: "tel:+1 00000000",
-  },
-  {
-    icon: Mail,
-    text: "info@XYZ.com",
-    href: "mailto:info@XYZ.com",
-  },
-];
+const contactIcons = {
+  "map-pin": MapPin,
+  phone: Phone,
+  mail: Mail,
+};
 
 export default function Footer() {
   const reduceMotion = useReducedMotion();
@@ -59,7 +35,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative overflow-hidden bg-white">
+    <footer aria-label={footerSectionData.ariaLabel} className="relative overflow-hidden bg-white">
 
       {/* DECORATIVE BACKGROUND */}
       <div className="pointer-events-none absolute -right-20 -top-32 h-[400px] w-[260px] rotate-[42deg] bg-gradient-to-b from-[#fff4e8] to-[#fffaf5]" />
@@ -82,8 +58,8 @@ export default function Footer() {
 
             {/* LOGO */}
             <Link
-              href="/"
-              aria-label="BOXNEXA Home"
+              href={standaloneSiteData.homeHref}
+              aria-label={`${standaloneSiteData.name} ${standaloneSiteData.homeLabel}`}
               className="inline-flex"
             >
               <motion.div
@@ -94,8 +70,8 @@ export default function Footer() {
                 className="relative h-[100px] w-[300px] max-w-full sm:h-[115px] sm:w-[380px]"
               >
                 <Image
-                  src="/images/logo.webp"
-                  alt="BOXNEXA - Paper and Packaging Solutions"
+                  src={standaloneSiteData.logo}
+                  alt={standaloneSiteData.alt}
                   fill
                   sizes="(max-width: 640px) 300px, 380px"
                   className="object-contain object-left"
@@ -106,9 +82,7 @@ export default function Footer() {
 
             {/* DESCRIPTION */}
             <p className="mt-5 max-w-[470px] text-[16px] leading-[1.7] text-[#30343a] sm:text-[18px]">
-              Reliable and customizable paper packaging
-              solutions for businesses across diverse
-              industries.
+              {footerSectionData.about}
             </p>
 
           </motion.div>
@@ -124,7 +98,7 @@ export default function Footer() {
           >
 
             <h3 className="text-[25px] font-bold tracking-tight text-[#252a30] sm:text-[29px]">
-              Quick Links
+              {footerSectionData.columns[0].title}
             </h3>
 
             {/* ORANGE LINE */}
@@ -133,9 +107,9 @@ export default function Footer() {
             {/* LINKS */}
             <ul className="mt-6 space-y-4">
 
-              {quickLinks.map((link, index) => (
+              {footerSectionData.columns[0].links.map((link, index) => (
                 <motion.li
-                  key={link.name}
+                  key={link.label}
                   initial={
                     reduceMotion ? false : { opacity: 0, x: -15 }
                   }
@@ -157,7 +131,7 @@ export default function Footer() {
                       className="transition-transform duration-300 group-hover:translate-x-1 group-hover:text-[#e89519]"
                     />
 
-                    <span>{link.name}</span>
+                    <span>{link.label}</span>
 
                     <ArrowUpRight
                       size={15}
@@ -183,7 +157,7 @@ export default function Footer() {
           >
 
             <h3 className="text-[25px] font-bold tracking-tight text-[#252a30] sm:text-[29px]">
-              Contact Info
+              {footerSectionData.contactTitle}
             </h3>
 
             {/* ORANGE LINE */}
@@ -192,15 +166,15 @@ export default function Footer() {
             {/* CONTACT LIST */}
             <div className="mt-7 space-y-6 sm:space-y-7">
 
-              {contactInfo.map((item, index) => {
-                const Icon = item.icon;
+              {footerSectionData.contactDetails.map((item, index) => {
+                const Icon = contactIcons[item.icon as keyof typeof contactIcons];
 
                 return (
                   <motion.a
-                    key={index}
+                    key={item.title}
                     href={item.href}
-                    target={index === 0 ? "_blank" : undefined}
-                    rel={index === 0 ? "noopener noreferrer" : undefined}
+                    target={item.icon === "map-pin" ? "_blank" : undefined}
+                    rel={item.icon === "map-pin" ? "noopener noreferrer" : undefined}
                     initial={
                       reduceMotion ? false : { opacity: 0, x: 20 }
                     }
@@ -226,7 +200,7 @@ export default function Footer() {
 
                     {/* TEXT */}
                     <div className="pt-0.5 text-[16px] leading-[1.65] text-[#252a30] transition-colors duration-300 group-hover:text-[#e89519] sm:text-[19px]">
-                      {item.text}
+                      {item.value}
                     </div>
 
                   </motion.a>
@@ -257,7 +231,7 @@ export default function Footer() {
             viewport={{ once: true }}
             className="text-center text-[14px] text-white/90 sm:text-left sm:text-[17px]"
           >
-            Copyright © 2026. All Rights Reserved. Powered By Lestow.
+            {footerSectionData.copyright}
           </motion.p>
 
         </div>

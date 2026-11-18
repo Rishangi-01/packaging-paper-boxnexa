@@ -8,27 +8,18 @@ import {
   Layers3,
 } from "lucide-react";
 import { FaAward } from "react-icons/fa6";
+import { aboutSectionData } from "@/data";
 
-const features = [
-  {
-    title: "Premium",
-    subtitle: "Quality",
-    icon: FaAward,
-  },
-  {
-    title: "Sustainable",
-    subtitle: "& Eco-Friendly",
-    icon: Leaf,
-  },
-  {
-    title: "Custom",
-    subtitle: "Solutions",
-    icon: Layers3,
-  },
-];
+const featureIcons = {
+  award: FaAward,
+  leaf: Leaf,
+  layers: Layers3,
+};
 
 export default function AboutSection() {
   const reduceMotion = useReducedMotion();
+  const content = aboutSectionData.homeSection;
+  const description = content.description[0];
 
   const fadeUp = {
     hidden: { opacity: 0, y: 35 },
@@ -70,8 +61,8 @@ export default function AboutSection() {
             <div className="relative aspect-[1.04/1] w-full overflow-hidden bg-[#f4f1ed] sm:aspect-[1.1/1] lg:aspect-[0.98/1]">
 
               <Image
-                src="/images/about-factory.webp"
-                alt="BOXNEXA paper manufacturing and packaging facility"
+                src={aboutSectionData.mainImage}
+                alt={aboutSectionData.mainImageAlt}
                 fill
                 priority={false}
                 sizes="(max-width: 1024px) 100vw, 45vw"
@@ -103,7 +94,7 @@ export default function AboutSection() {
               <span className="h-[5px] w-12 bg-[#e89519] sm:w-[65px]" />
 
               <span className="text-[13px] font-bold uppercase tracking-[4px] text-[#252a30] sm:text-[16px]">
-                About Us
+                {content.eyebrow}
               </span>
             </motion.div>
 
@@ -116,9 +107,9 @@ export default function AboutSection() {
               transition={{ delay: 0.1 }}
               className="text-[clamp(2.5rem,5vw,5.2rem)] font-light leading-[1.12] tracking-[-2px] text-[#252a30]"
             >
-              About{" "}
+              {content.title[0]}{" "}
               <span className="font-normal text-[#df901e]">
-                BOXNEXA
+                {content.title[1]}
               </span>
             </motion.h2>
 
@@ -132,14 +123,9 @@ export default function AboutSection() {
               className="mt-6 text-[16px] leading-[1.8] text-[#42464b] sm:text-[18px] lg:mt-7 lg:text-[19px] xl:text-[20px]"
             >
               <strong className="font-bold text-[#252a30]">
-                BOXNEXA
+                {description.slice(0, aboutSectionData.highlight.length)}
               </strong>{" "}
-              is a trusted name in paper and packaging solutions,
-              delivering high-quality, durable, and eco-friendly
-              packaging for businesses across diverse industries.
-              We combine modern manufacturing, premium materials,
-              and a customer-focused approach to create packaging
-              that protects, presents, and adds value to your products.
+              {description.slice(aboutSectionData.highlight.length)}
             </motion.p>
 
             {/* FEATURES */}
@@ -157,8 +143,8 @@ export default function AboutSection() {
               }}
               className="mt-8 grid grid-cols-3 divide-x divide-gray-300 sm:mt-12 lg:mt-12"
             >
-              {features.map((feature, index) => {
-                const Icon = feature.icon;
+              {content.features.map((feature) => {
+                const Icon = featureIcons[feature.icon as keyof typeof featureIcons];
 
                 return (
                   <motion.div

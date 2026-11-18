@@ -10,70 +10,22 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, A11y } from "swiper/modules";
 
 import type { Swiper as SwiperType } from "swiper";
+import { testimonialsSectionData } from "@/data";
 
 import "swiper/css";
 import "swiper/css/pagination";
-
-const testimonials = [
-  {
-    id: 1,
-    name: "Rahul Mehta",
-    role: "Operations Head",
-    image: "/images/customer-michel.webp",
-    review:
-      "Excellent quality and timely delivery. Their packaging solutions have added real value to our products.",
-  },
-  {
-    id: 2,
-    name: "Neha Sharma",
-    role: "Purchase Manager",
-    image: "/images/customer-theresa.webp",
-    review:
-      "A reliable partner for all our paper and packaging needs. The quality, service, and support are outstanding.",
-  },
-  {
-    id: 3,
-    name: "Amit Verma",
-    role: "Director",
-    image: "/images/customer-william.webp",
-    review:
-      "Consistent quality, great customization options, and a professional team. Highly recommended!",
-  },
-  {
-    id: 4,
-    name: "Priya Kapoor",
-    role: "Business Owner",
-    image: "/images/customer-theresa.webp",
-    review:
-      "We are very happy with the packaging quality. The products are durable, well-designed, and delivered on time.",
-  },
-  {
-    id: 5,
-    name: "Arjun Malhotra",
-    role: "Supply Chain Manager",
-    image: "/images/customer-michel.webp",
-    review:
-      "Their customized packaging solutions perfectly match our business requirements. Great experience overall.",
-  },
-  {
-    id: 6,
-    name: "Ananya Gupta",
-    role: "Retail Manager",
-    image: "/images/customer-william.webp",
-    review:
-      "Excellent customer support and premium packaging quality. We look forward to continuing our partnership.",
-  },
-];
 
 export default function TestimonialsSection() {
   const [swiper, setSwiper] = useState<SwiperType | null>(null);
   const [activeIndex, setActiveIndex] = useState(1);
 
   const reduceMotion = useReducedMotion();
+  const testimonials = testimonialsSectionData.items;
 
   return (
     <section
       id="testimonials"
+      aria-label={testimonialsSectionData.ariaLabel}
       className="relative overflow-hidden bg-white py-8 sm:py-12 lg:py-12 w-full"
     >
       <div className="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12 xl:px-16">
@@ -92,7 +44,7 @@ export default function TestimonialsSection() {
             <span className="h-[5px] w-10 bg-[#e89519] sm:w-[55px]" />
 
             <span className="text-[12px] font-bold uppercase tracking-[3px] text-[#252a30] sm:text-[16px] sm:tracking-[4px]">
-              Testimonials
+              {testimonialsSectionData.eyebrow}
             </span>
 
             <span className="h-[5px] w-10 bg-[#e89519] sm:w-[55px]" />
@@ -106,9 +58,9 @@ export default function TestimonialsSection() {
             transition={{ duration: 0.7 }}
             className="text-[clamp(2.2rem,3.5vw,5rem)] font-bold leading-[1.2] tracking-[-1.5px] text-[#252a30]"
           >
-            What Our{" "}
+            {testimonialsSectionData.title}{" "}
             <span className="text-[#e89519]">
-              Clients Say
+              {testimonialsSectionData.highlight}
             </span>
           </motion.h2>
 
@@ -120,8 +72,7 @@ export default function TestimonialsSection() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="mt-4 text-[15px] leading-relaxed text-[#555b62] sm:text-[18px] lg:text-[21px]"
           >
-            Trusted by businesses for reliable, high-quality packaging
-            solutions.
+            {testimonialsSectionData.text}
           </motion.p>
         </div>
 
@@ -138,7 +89,7 @@ export default function TestimonialsSection() {
           <button
             type="button"
             onClick={() => swiper?.slidePrev()}
-            aria-label="Previous testimonial"
+            aria-label={testimonialsSectionData.previousLabel}
             className="absolute left-0 top-1/2 z-20 hidden h-[54px] w-[54px] -translate-y-1/2 items-center justify-center rounded-full border border-[#dedede] bg-white text-[#252a30] shadow-sm transition-all duration-300 hover:border-[#e89519] hover:bg-[#e89519] hover:text-white sm:flex"
           >
             <ChevronLeft size={30} strokeWidth={2.2} />
@@ -179,7 +130,7 @@ export default function TestimonialsSection() {
             }}
           >
             {testimonials.map((item, index) => (
-              <SwiperSlide key={item.id} className="!h-auto py-2">
+              <SwiperSlide key={item.name} className="!h-auto py-2">
 
         
                 <div
@@ -201,7 +152,7 @@ export default function TestimonialsSection() {
 
         
                     <p className="text-[16px] font-medium leading-[1.65] text-[#30343a] sm:text-[17px] lg:text-[18px]">
-                      {item.review}
+                      {item.quote}
                     </p>
                   </div>
 
@@ -215,7 +166,7 @@ export default function TestimonialsSection() {
                     <div className="relative h-[65px] w-[65px] shrink-0 overflow-hidden rounded-full border-[3px] border-[#f5f1e9] sm:h-[75px] sm:w-[75px]">
                       <Image
                         src={item.image}
-                        alt={item.name}
+                        alt={item.imageAlt}
                         fill
                         sizes="75px"
                         className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -229,13 +180,13 @@ export default function TestimonialsSection() {
                       </h3>
 
                       <p className="mt-1 text-[13px] leading-tight text-[#69717a] sm:text-[15px]">
-                        {item.role}
+                        {item.city}
                       </p>
                     </div>
 
                     {/* STARS */}
-                    <div className="flex shrink-0 gap-[2px]">
-                      {[1, 2, 3, 4, 5].map((star) => (
+                    <div className="flex shrink-0 gap-[2px]" aria-label={`${item.rating} ${testimonialsSectionData.ratingLabel}`}>
+                      {Array.from({ length: item.rating }, (_, index) => index + 1).map((star) => (
                         <Star
                           key={star}
                           size={16}
@@ -265,7 +216,7 @@ export default function TestimonialsSection() {
           <button
             type="button"
             onClick={() => swiper?.slideNext()}
-            aria-label="Next testimonial"
+            aria-label={testimonialsSectionData.nextLabel}
             className="absolute right-0 top-1/2 z-20 hidden h-[54px] w-[54px] -translate-y-1/2 items-center justify-center rounded-full bg-[#e89519] text-white shadow-md transition-all duration-300 hover:bg-[#252a30] sm:flex"
           >
             <ChevronRight size={30} strokeWidth={2.2} />
@@ -276,7 +227,7 @@ export default function TestimonialsSection() {
             <button
               type="button"
               onClick={() => swiper?.slidePrev()}
-              aria-label="Previous testimonial"
+              aria-label={testimonialsSectionData.previousLabel}
               className="flex h-10 w-10 items-center justify-center rounded-full border border-[#dedede] text-[#252a30] transition hover:bg-[#e89519] hover:text-white"
             >
               <ChevronLeft size={22} />
@@ -285,7 +236,7 @@ export default function TestimonialsSection() {
             <button
               type="button"
               onClick={() => swiper?.slideNext()}
-              aria-label="Next testimonial"
+              aria-label={testimonialsSectionData.nextLabel}
               className="flex h-10 w-10 items-center justify-center rounded-full bg-[#e89519] text-white transition hover:bg-[#252a30]"
             >
               <ChevronRight size={22} />

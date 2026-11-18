@@ -2,11 +2,13 @@
 "use client";
 
 import { motion, useReducedMotion } from "motion/react";
-import { ArrowRight } from "lucide-react";
-import Link from "next/link";
+import { heroSectionData } from "@/data";
 
 export default function HeroSection() {
   const shouldReduceMotion = useReducedMotion();
+  const slide = heroSectionData.slides[0];
+  const title = slide.title;
+  const textLines = heroSectionData.homeTextLines;
 
   const fadeUp = {
     hidden: { opacity: 0, y: 35 },
@@ -33,7 +35,7 @@ export default function HeroSection() {
         }}
         className="absolute inset-0 -z-20 bg-cover bg-[position:65%_center] sm:bg-[position:60%_center] lg:bg-center"
         style={{
-          backgroundImage: "url('/images/hero-bg.webp')",
+          backgroundImage: `url('${slide.image}')`,
         }}
       />
 
@@ -52,7 +54,7 @@ export default function HeroSection() {
             <span className="h-[5px] w-12 bg-[#e89519] sm:w-[60px]" />
 
             <span className="text-[12px] font-bold uppercase tracking-[3px] text-[#292d32] sm:text-[15px] sm:tracking-[4px]">
-              Welcome to Boxnexa
+              {slide.eyebrow}
             </span>
           </motion.div>
 
@@ -64,15 +66,9 @@ export default function HeroSection() {
             transition={{ delay: 0.15 }}
             className="text-[clamp(3.3rem,7.5vw,5.8rem)] font-extrabold leading-[0.98] text-[#24272c]"
           >
-            Paper &
-
-            <span className="block text-[#e89519]">
-              Packaging
-            </span>
-
-            <span className="block">
-              Solutions
-            </span>
+            {title[0]}
+            <span className="block text-[#e89519]">{title[1]}</span>
+            <span className="block">{title[2]}</span>
           </motion.h1>
 
       
@@ -83,10 +79,8 @@ export default function HeroSection() {
             transition={{ delay: 0.3 }}
             className="mt-5 max-w-[590px] text-[17px] font-medium leading-[1.65] text-[#33383e] sm:mt-5 sm:text-[21px] lg:text-[24px]"
           >
-            High-Quality, Custom & Sustainable
-            <span className="block">
-              Packaging for Every Business
-            </span>
+            {textLines[0]}
+            <span className="block">{textLines[1]}</span>
           </motion.p>
 
         </div>

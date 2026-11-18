@@ -14,65 +14,18 @@ import {
   Factory,
   ArrowUpRight,
 } from "lucide-react";
+import { industriesSectionData } from "@/data";
 
-const industries = [
-  {
-    id: 1,
-    title: "Retail &",
-    subtitle: "E-Commerce",
-    icon: ShoppingCart,
-    href: "/industries/retail-ecommerce",
-  },
-  {
-    id: 2,
-    title: "Food &",
-    subtitle: "Beverage",
-    icon: ConciergeBell,
-    href: "/industries/food-beverage",
-  },
-  {
-    id: 3,
-    title: "Pharmaceutical",
-    subtitle: "& Healthcare",
-    icon: Pill,
-    href: "/industries/pharmaceutical-healthcare",
-  },
-  {
-    id: 4,
-    title: "Automotive",
-    subtitle: "& Engineering",
-    icon: CarFront,
-    href: "/industries/automotive-engineering",
-  },
-  {
-    id: 5,
-    title: "FMCG &",
-    subtitle: "Consumer Goods",
-    icon: Package,
-    href: "/industries/fmcg-consumer-goods",
-  },
-  {
-    id: 6,
-    title: "Electronics",
-    subtitle: "& Appliances",
-    icon: Laptop,
-    href: "/industries/electronics-appliances",
-  },
-  {
-    id: 7,
-    title: "Publishing",
-    subtitle: "& Stationery",
-    icon: BookOpen,
-    href: "/industries/publishing-stationery",
-  },
-  {
-    id: 8,
-    title: "Manufacturing",
-    subtitle: "& Industrial",
-    icon: Factory,
-    href: "/industries/manufacturing-industrial",
-  },
-];
+const industryIcons = {
+  "shopping-cart": ShoppingCart,
+  "concierge-bell": ConciergeBell,
+  pill: Pill,
+  "car-front": CarFront,
+  package: Package,
+  laptop: Laptop,
+  "book-open": BookOpen,
+  factory: Factory,
+};
 
 export default function IndustriesSection() {
   const reduceMotion = useReducedMotion();
@@ -122,7 +75,7 @@ export default function IndustriesSection() {
             <span className="h-[5px] w-10 bg-[#e89519] sm:w-[55px]" />
 
             <span className="text-[12px] font-bold uppercase tracking-[3px] text-[#252a30] sm:text-[16px] sm:tracking-[4px]">
-              Industries We Serve
+              {industriesSectionData.eyebrow}
             </span>
 
             <span className="h-[5px] w-10 bg-[#e89519] sm:w-[55px]" />
@@ -136,9 +89,9 @@ export default function IndustriesSection() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="text-[clamp(2rem,4.5vw,3.5rem)] font-bold leading-[1.2] tracking-[-1.5px] text-[#252a30]"
           >
-            Packaging Solutions for{" "}
+            {industriesSectionData.title}{" "}
             <span className="text-[#df901e]">
-              Diverse Industries
+              {industriesSectionData.highlight}
             </span>
           </motion.h2>
 
@@ -150,8 +103,7 @@ export default function IndustriesSection() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="mx-auto mt-4 max-w-5xl text-[15px] leading-[1.8] text-[#555b62] sm:text-[18px] lg:text-[21px]"
           >
-            Reliable and customized paper packaging for a wide
-            range of industry applications.
+            {industriesSectionData.description}
           </motion.p>
         </div>
 
@@ -163,8 +115,8 @@ export default function IndustriesSection() {
           viewport={{ once: true, amount: 0.12 }}
           className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5 xl:gap-6"
         >
-          {industries.map((industry) => {
-            const Icon = industry.icon;
+          {industriesSectionData.items.map((industry) => {
+            const Icon = industryIcons[industry.icon as keyof typeof industryIcons];
 
             return (
               <motion.div

@@ -11,48 +11,22 @@ import {
   PackageCheck,
   ArrowUpRight,
 } from "lucide-react";
+import { servicesSectionData } from "@/data";
 
-const services = [
-  {
-    id: 1,
-    title: "Corrugated Packaging",
-    description:
-      "Durable and reliable corrugated boxes for safe and efficient shipping.",
-    image: "/images/corrugated-packaging.webp",
-    icon: Box,
-    href: "/services/corrugated-packaging",
-  },
-  {
-    id: 2,
-    title: "Kraft Paper Solutions",
-    description:
-      "High-strength, eco-friendly kraft paper for versatile applications.",
-    image: "/images/kraft-paper-service.webp",
-    icon: Scroll,
-    href: "/services/kraft-paper",
-  },
-  {
-    id: 3,
-    title: "Paper Bags",
-    description:
-      "Strong, recyclable and brand-ready paper bags for retail and business.",
-    image: "/images/paper-bags-service.webp",
-    icon: ShoppingBag,
-    href: "/services/paper-bags",
-  },
-  {
-    id: 4,
-    title: "Custom Packaging",
-    description:
-      "Tailored, high-quality packaging designed to fit your product perfectly.",
-    image: "/images/custom-packaging-service.webp",
-    icon: PackageCheck,
-    href: "/services/custom-packaging",
-  },
-];
+const serviceIcons = {
+  box: Box,
+  scroll: Scroll,
+  "shopping-bag": ShoppingBag,
+  layers: PackageCheck,
+};
 
 export default function ServicesSection() {
   const reduceMotion = useReducedMotion();
+  const services = servicesSectionData.items.filter(
+    (service): service is typeof service & { homeHref: string } =>
+      service.homeHref !== undefined &&
+      servicesSectionData.homeServiceSlugs.includes(service.slug)
+  );
 
   const containerVariants = {
     hidden: {},
@@ -99,7 +73,7 @@ export default function ServicesSection() {
             <span className="h-[5px] w-10 bg-[#e89519] sm:w-[55px]" />
 
             <span className="text-[12px] font-bold uppercase tracking-[3px] text-[#252a30] sm:text-[16px] sm:tracking-[4px]">
-              Our Services
+              {servicesSectionData.eyebrow}
             </span>
 
             <span className="h-[5px] w-10 bg-[#e89519] sm:w-[55px]" />
@@ -112,9 +86,9 @@ export default function ServicesSection() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="text-[clamp(2rem,3.5vw,5rem)] font-semibold leading-[1.2] tracking-[-1.5px] text-[#252a30]"
           >
-            Complete Paper &{" "}
+            {servicesSectionData.title}{" "}
             <span className="text-[#df901e]">
-              Packaging Services
+              {servicesSectionData.highlight}
             </span>
           </motion.h2>
 
@@ -126,8 +100,7 @@ export default function ServicesSection() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="mx-auto mt-4 max-w-5xl text-[15px] leading-[1.8] text-[#60646a] sm:text-[18px] lg:text-[21px]"
           >
-            From concept to delivery, we provide end-to-end
-            packaging solutions tailored to your business needs.
+            {servicesSectionData.text}
           </motion.p>
         </div>
 
@@ -140,16 +113,16 @@ export default function ServicesSection() {
           className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5 xl:gap-6"
         >
           {services.map((service) => {
-            const Icon = service.icon;
+            const Icon = serviceIcons[service.homeIcon as keyof typeof serviceIcons];
 
             return (
               <motion.div
-                key={service.id}
+                key={service.slug}
                 variants={cardVariants}
                 className="group h-full"
               >
                 <Link
-                  href={service.href}
+                  href={service.homeHref}
                   className="relative flex h-full flex-col overflow-hidden rounded-[9px] border border-[#eee9e2] bg-white shadow-[0_4px_20px_rgba(0,0,0,0.035)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_18px_40px_rgba(0,0,0,0.10)]"
                 >
 
@@ -157,8 +130,8 @@ export default function ServicesSection() {
                   <div className="relative aspect-[1.5/1] w-full overflow-hidden bg-[#eee9e2]">
 
                     <Image
-                      src={service.image}
-                      alt={service.title}
+                      src={service.homeImage}
+                      alt={service.homeImageAlt ?? service.treatmentImageAlt ?? service.title}
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
@@ -191,7 +164,7 @@ export default function ServicesSection() {
 
                   
                     <p className="mt-2 flex-1 text-[14px] leading-[1.8] text-[#555b62] sm:text-[15px]">
-                      {service.description}
+                      {service.text}
                     </p>
 
                   </div>
