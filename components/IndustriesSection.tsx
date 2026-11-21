@@ -57,7 +57,7 @@ export default function IndustriesSection() {
   return (
     <section
       id="industries"
-      className="relative overflow-hidden bg-white py-8 sm:py-12 lg:py-16"
+      className="relative overflow-hidden bg-white py-8 sm:py-12 lg:py-16 w-full"
     >
       <div className="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12 xl:px-16">
 

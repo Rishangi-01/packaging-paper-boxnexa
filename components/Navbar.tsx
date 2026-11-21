@@ -66,7 +66,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full bg-white">
       <nav
         aria-label={headerData.ariaLabel}
-        className="relative mx-auto flex min-h-[90px] w-full items-center justify-between px-5 py-2 shadow-[0_3px_18px_rgba(0,0,0,0.035)] sm:px-8 lg:min-h-[112px] lg:px-10 xl:px-12"
+        className="relative mx-auto flex min-h-[90px] max-w-[1600px] w-full items-center justify-between px-5 py-2 shadow-[0_3px_18px_rgba(0,0,0,0.035)] sm:px-8 lg:min-h-[112px] lg:px-10 xl:px-12"
       >
         <Link
           href={standaloneSiteData.homeHref}

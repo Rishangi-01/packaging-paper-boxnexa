@@ -88,7 +88,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden bg-white py-8 sm:py-12 lg:py-16"
+      className="relative overflow-hidden bg-white py-8 sm:py-12 lg:py-16 w-full"
     >
 
       
@@ -199,7 +199,7 @@ export default function ContactSection() {
                 duration: reduceMotion ? 0 : 0.9,
                 delay: 0.2,
               }}
-              className="relative mx-auto mt-6 h-[220px] w-full max-w-[620px] sm:mt-8 sm:h-[290px] lg:mx-0 lg:-mt-[75px] lg:h-[300px] xl:h-[330px]"
+              className="relative mx-auto mt-6 h-[220px] w-full max-w-[420px] sm:mt-8 sm:h-[290px] lg:mx-0 lg:-mt-[75px] lg:h-[300px] xl:h-[300px]"
             >
               <motion.div
                 animate={

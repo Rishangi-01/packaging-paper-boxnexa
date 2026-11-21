@@ -238,7 +238,7 @@ export default function TestimonialsSection() {
               type="button"
               onClick={() => swiper?.slideNext()}
               aria-label={testimonialsSectionData.nextLabel}
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-[#e89519] text-white transition hover:bg-[#252a30]"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-[#dedede] text-[#252a30] transition hover:bg-[#e89519] hover:text-white"
             >
               <ChevronRight size={22} />
             </button>

@@ -221,7 +221,7 @@ export default function Footer() {
         {/* SUBTLE BACKGROUND EFFECT */}
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#252a33] via-[#2b303a] to-[#252a33]" />
 
-        <div className="relative mx-auto flex max-w-[1650px] flex-col items-center justify-between gap-3 px-5 py-6 sm:px-8 sm:py-7 md:flex-row lg:px-12">
+        <div className="relative mx-auto flex max-w-[1600px] flex-col items-center justify-between gap-3 px-5 py-6 sm:px-8 sm:py-7 md:flex-row lg:px-12">
 
           <motion.p
             initial={
