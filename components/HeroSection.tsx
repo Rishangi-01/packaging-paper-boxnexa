@@ -40,7 +40,7 @@ export default function HeroSection() {
       />
 
       
-      <div className="mx-auto flex h-full min-h-[650px] max-w-[1600px] items-center py-20 sm:min-h-[720px] lg:min-h-0 px-5 sm:px-8 lg:px-12 xl:px-16">
+      <div className="mx-auto flex h-full min-h-[500px] max-w-[1600px] items-center py-20 sm:min-h-[720px] lg:min-h-0 px-5 sm:px-8 lg:px-12 xl:px-16">
 
         <div className="w-full max-w-[680px]">
 

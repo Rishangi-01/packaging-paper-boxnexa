@@ -1077,7 +1077,7 @@
                 "active": true
               },
               {
-                "label": "About Us",
+                "label": "About Us",  
                 "href": "#about",
                 "active": false
               },
