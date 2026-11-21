@@ -187,7 +187,7 @@
           },
           "heading": "Product Detail",
           "homeLabel": "Home",
-          "homeHref": "/",
+          "homeHref": "#home",
           "currentLabel": "Product Detail"
         },
         "product": {
@@ -1073,7 +1073,7 @@
             "links": [
               {
                 "label": "Home",
-                "href": "/",
+                "href": "#home",
                 "active": true
               },
               {
