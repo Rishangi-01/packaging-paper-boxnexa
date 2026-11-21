@@ -73,7 +73,7 @@ export default function Navbar() {
           aria-label={`${standaloneSiteData.name} ${standaloneSiteData.homeLabel}`}
           className="inline-flex"
         >
-          <div className="relative h-[100px] w-[250px] max-w-full sm:h-[95px] sm:w-[300px]">
+          <div className="relative h-[60px] w-[180px] max-w-full sm:h-[95px] sm:w-[300px]">
             <Image
               src={standaloneSiteData.logo}
               alt={standaloneSiteData.alt}

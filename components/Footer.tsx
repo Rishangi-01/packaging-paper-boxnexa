@@ -37,17 +37,17 @@ export default function Footer() {
   return (
     <footer aria-label={footerSectionData.ariaLabel} className="relative overflow-hidden bg-white">
 
-      {/* DECORATIVE BACKGROUND */}
+      
       <div className="pointer-events-none absolute -right-20 -top-32 h-[400px] w-[260px] rotate-[42deg] bg-gradient-to-b from-[#fff4e8] to-[#fffaf5]" />
 
       <div className="pointer-events-none absolute -bottom-40 -right-10 h-[350px] w-[170px] rotate-[42deg] bg-gradient-to-b from-[#fff4e8] to-[#fffaf5]" />
 
-      {/* MAIN FOOTER */}
-      <div className="relative mx-auto max-w-[1600px] pb-14 pt-14 sm:pb-16 sm:pt-16 lg:pb-20 lg:pt-20 px-5 sm:px-8 lg:px-12 xl:px-16">
+      
+      <div className="relative mx-auto max-w-[1600px] pb-14 pt-14 sm:pb-16 sm:pt-16 lg:pb-20 lg:pt-12 px-5 sm:px-8 lg:px-12 xl:px-16">
 
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-[1.55fr_0.85fr_1.3fr] lg:gap-12">
 
-          {/* COMPANY INFORMATION */}
+      
           <motion.div
             variants={fadeUp}
             initial="hidden"
@@ -56,7 +56,7 @@ export default function Footer() {
             className="relative lg:pr-10"
           >
 
-            {/* LOGO */}
+      
             <Link
               href={standaloneSiteData.homeHref}
               aria-label={`${standaloneSiteData.name} ${standaloneSiteData.homeLabel}`}
@@ -67,7 +67,7 @@ export default function Footer() {
                   reduceMotion ? undefined : { scale: 1.035 }
                 }
                 transition={{ duration: 0.3 }}
-                className="relative h-[100px] w-[300px] max-w-full sm:h-[115px] sm:w-[380px]"
+                className="relative h-[60px] w-[180px] max-w-full sm:h-[115px] sm:w-[380px]"
               >
                 <Image
                   src={standaloneSiteData.logo}
@@ -80,14 +80,14 @@ export default function Footer() {
               </motion.div>
             </Link>
 
-            {/* DESCRIPTION */}
+      
             <p className="mt-5 max-w-[470px] text-[16px] leading-[1.7] text-[#30343a] sm:text-[18px]">
               {footerSectionData.about}
             </p>
 
           </motion.div>
 
-          {/* QUICK LINKS */}
+     
           <motion.div
             variants={fadeUp}
             initial="hidden"
@@ -101,10 +101,10 @@ export default function Footer() {
               {footerSectionData.columns[0].title}
             </h3>
 
-            {/* ORANGE LINE */}
+     
             <div className="mt-4 h-[4px] w-[72px] rounded-full bg-[#ed9410]" />
 
-            {/* LINKS */}
+     
             <ul className="mt-6 space-y-4">
 
               {footerSectionData.columns[0].links.map((link, index) => (

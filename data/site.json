@@ -1109,7 +1109,7 @@
             },
             "mobileButton": {
               "label": "Get a Quote",
-              "href": "/contact"
+              "href": "#contact"
             }
           }
         }

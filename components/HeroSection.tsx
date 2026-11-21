@@ -33,7 +33,7 @@ export default function HeroSection() {
           duration: shouldReduceMotion ? 0 : 1.5,
           ease: "easeOut",
         }}
-        className="absolute inset-0 -z-20 bg-cover bg-[position:65%_center] sm:bg-[position:60%_center] lg:bg-center"
+        className="absolute inset-0 -z-20 bg-cover bg-[position:20%_center] sm:bg-[position:60%_center] lg:bg-center"
         style={{
           backgroundImage: `url('${slide.image}')`,
         }}

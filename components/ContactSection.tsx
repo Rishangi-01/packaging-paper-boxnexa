@@ -156,10 +156,10 @@ export default function ContactSection() {
                   >
 
       
-                    <div className="flex h-[75px] w-[75px] shrink-0 items-center justify-center rounded-[20px] bg-[#faf5ed] transition-all duration-500 group-hover:bg-[#e89519] group-hover:shadow-[0_10px_25px_rgba(232,149,25,0.2)] sm:h-[85px] sm:w-[85px] sm:rounded-[22px]">
+                    <div className="flex h-[65px] w-[65px] shrink-0 items-center justify-center rounded-[20px] bg-[#faf5ed] transition-all duration-500 group-hover:bg-[#e89519] group-hover:shadow-[0_10px_25px_rgba(232,149,25,0.2)] sm:h-[75px] sm:w-[75px] sm:rounded-[22px]">
 
                       <Icon
-                        size={36}
+                        size={28}
                         strokeWidth={1.9}
                         className="text-[#e89519] transition-all duration-500 group-hover:scale-110 group-hover:text-white sm:h-[40px] sm:w-[40px]"
                       />
@@ -199,7 +199,7 @@ export default function ContactSection() {
                 duration: reduceMotion ? 0 : 0.9,
                 delay: 0.2,
               }}
-              className="relative mx-auto mt-10 h-[220px] w-full max-w-[620px] sm:mt-12 sm:h-[290px] lg:mx-0 lg:mt-7 lg:h-[300px] xl:h-[330px]"
+              className="relative mx-auto mt-6 h-[220px] w-full max-w-[620px] sm:mt-8 sm:h-[290px] lg:mx-0 lg:-mt-[75px] lg:h-[300px] xl:h-[330px]"
             >
               <motion.div
                 animate={

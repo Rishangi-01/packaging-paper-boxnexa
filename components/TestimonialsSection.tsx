@@ -17,7 +17,7 @@ import "swiper/css/pagination";
 
 export default function TestimonialsSection() {
   const [swiper, setSwiper] = useState<SwiperType | null>(null);
-  const [activeIndex, setActiveIndex] = useState(1);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const reduceMotion = useReducedMotion();
   const testimonials = testimonialsSectionData.items;
@@ -102,6 +102,7 @@ export default function TestimonialsSection() {
             onSlideChange={(instance) => setActiveIndex(instance.realIndex)}
             slidesPerView={1}
             slidesPerGroup={1}
+            centeredSlides={true}
             spaceBetween={20}
             loop={true}
             speed={750}
@@ -135,9 +136,9 @@ export default function TestimonialsSection() {
         
                 <div
                   className={`group relative flex h-full min-h-[355px] flex-col justify-between overflow-hidden rounded-[20px] border bg-white p-6 transition-all duration-500 sm:min-h-[370px] sm:p-7 lg:p-8 ${
-                    activeIndex === index + 1
+                    activeIndex === index
                       ? "border-[#e89519] shadow-[0_12px_30px_rgba(232,149,25,0.09)]"
-                      : "border-[#dedede] hover:border-[#e89519] hover:shadow-[0_15px_35px_rgba(0,0,0,0.07)]"
+                      : "border-[#dedede]"
                   }`}
                 >
 
@@ -203,7 +204,7 @@ export default function TestimonialsSection() {
                     className={`absolute bottom-0 left-0 h-[5px] w-full bg-[#e89519] transition-all duration-500 ${
                       activeIndex === index
                         ? "opacity-100"
-                        : "opacity-0 group-hover:opacity-100"
+                        : "opacity-0"
                     }`}
                   />
 
@@ -217,7 +218,7 @@ export default function TestimonialsSection() {
             type="button"
             onClick={() => swiper?.slideNext()}
             aria-label={testimonialsSectionData.nextLabel}
-            className="absolute right-0 top-1/2 z-20 hidden h-[54px] w-[54px] -translate-y-1/2 items-center justify-center rounded-full bg-[#e89519] text-white shadow-md transition-all duration-300 hover:bg-[#252a30] sm:flex"
+            className="absolute right-0 top-1/2 z-20 hidden h-[54px] w-[54px] -translate-y-1/2 items-center justify-center rounded-full border border-[#dedede] bg-white text-[#252a30] shadow-md transition-all duration-300 hover:border-[#e89519] hover:bg-[#e89519] hover:text-white sm:flex"
           >
             <ChevronRight size={30} strokeWidth={2.2} />
           </button>
