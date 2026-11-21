@@ -55,7 +55,7 @@ export default function ServicesSection() {
   return (
     <section
       id="services"
-      className="relative overflow-hidden bg-[#faf9f7] py-16 sm:py-20 lg:py-24"
+      className="relative overflow-hidden bg-[#faf9f7] py-8 sm:py-12 lg:py-16"
     >
       <div className="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12 xl:px-16">
 

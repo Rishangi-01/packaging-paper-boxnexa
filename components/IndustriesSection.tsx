@@ -57,7 +57,7 @@ export default function IndustriesSection() {
   return (
     <section
       id="industries"
-      className="relative overflow-hidden bg-white py-16 sm:py-20 lg:py-24"
+      className="relative overflow-hidden bg-white py-8 sm:py-12 lg:py-16"
     >
       <div className="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12 xl:px-16">
 
@@ -124,28 +124,27 @@ export default function IndustriesSection() {
                 variants={cardVariants}
                 className="group h-full"
               >
-                <Link
-                  href={industry.href}
-                  className="relative flex min-h-[155px] h-full items-center gap-4 overflow-hidden rounded-[17px] border border-[#dedede] bg-white px-4 py-6 transition-all duration-500 hover:-translate-y-2 hover:border-[#e89519] hover:shadow-[0_14px_35px_rgba(0,0,0,0.08)] sm:gap-4 sm:px-5 lg:min-h-[180px] xl:gap-5 xl:px-6"
+                <div
+                  className="relative flex min-h-[155px] h-full items-center gap-4 overflow-hidden rounded-[17px] border border-[#dedede] bg-white px-4 py-6 transition-all duration-500 hover:-translate-y-2 hover:border-[#e89519] hover:shadow-[0_14px_35px_rgba(0,0,0,0.08)] sm:gap-4 sm:px-4 lg:min-h-[180px] xl:gap-4 xl:px-4"
                 >
 
-                  {/* ICON BACKGROUND */}
-                  <div className="flex h-[85px] w-[85px] shrink-0 items-center justify-center rounded-[20px] bg-[#faf6ef] transition-all duration-500 group-hover:bg-[#e89519] sm:h-[100px] sm:w-[100px] sm:rounded-[23px] xl:h-[115px] xl:w-[115px]">
+                  
+                  <div className="flex h-[85px] w-[85px] shrink-0 items-center justify-center rounded-[20px] bg-[#faf6ef] transition-all duration-500 group-hover:bg-[#e89519] sm:h-[85px] sm:w-[85px] sm:rounded-[23px] xl:h-[100px] xl:w-[100px]">
 
                     <Icon
-                      size={54}
+                      size={50}
                       strokeWidth={1.7}
                       className="text-[#df901e] transition-all duration-500 group-hover:scale-110 group-hover:rotate-[-5deg] group-hover:text-white sm:h-[60px] sm:w-[60px]"
                     />
 
                   </div>
 
-                  {/* VERTICAL DIVIDER */}
+                  
                   <div className="h-[75px] w-[2px] shrink-0 bg-[#d6d6d6] transition-colors duration-500 group-hover:bg-[#e89519] sm:h-[90px]" />
 
-                  {/* INDUSTRY NAME */}
+                  
                   <div className="min-w-0 flex-1">
-                    <h3 className="text-[17px] font-bold leading-[1.4] tracking-[-0.5px] text-[#252a30] transition-colors duration-300 group-hover:text-[#d88a17] sm:text-[19px] xl:text-[21px]">
+                    <h3 className="text-[16px] font-bold leading-[1.4] tracking-[-0.5px] text-[#252a30] transition-colors duration-300 group-hover:text-[#d88a17] sm:text-[18px] xl:text-[18px]">
                       {industry.title}
 
                       <span className="block">
@@ -154,15 +153,10 @@ export default function IndustriesSection() {
                     </h3>
                   </div>
 
-                  {/* HOVER ARROW */}
-                  <div className="absolute right-3 top-3 flex h-7 w-7 items-center justify-center rounded-full bg-[#e89519] text-white opacity-0 transition-all duration-300 group-hover:opacity-100">
-                    <ArrowUpRight size={16} />
-                  </div>
-
-                  {/* BOTTOM ORANGE LINE */}
+                  
                   <div className="absolute bottom-0 left-0 h-[5px] w-full bg-[#e89519] transition-all duration-500 group-hover:h-[7px]" />
 
-                </Link>
+                </div>
               </motion.div>
             );
           })}

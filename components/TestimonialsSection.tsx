@@ -26,7 +26,7 @@ export default function TestimonialsSection() {
     <section
       id="testimonials"
       aria-label={testimonialsSectionData.ariaLabel}
-      className="relative overflow-hidden bg-white py-8 sm:py-12 lg:py-12 w-full"
+      className="relative overflow-hidden bg-white py-8 sm:py-12 lg:py-16 w-full"
     >
       <div className="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12 xl:px-16">
 
@@ -82,7 +82,7 @@ export default function TestimonialsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.8 }}
-          className="relative px-0 sm:px-12 lg:px-14"
+          className="relative px-0 sm:px-12 lg:px-18"
         >
 
         
@@ -135,7 +135,7 @@ export default function TestimonialsSection() {
         
                 <div
                   className={`group relative flex h-full min-h-[355px] flex-col justify-between overflow-hidden rounded-[20px] border bg-white p-6 transition-all duration-500 sm:min-h-[370px] sm:p-7 lg:p-8 ${
-                    activeIndex === index
+                    activeIndex === index + 1
                       ? "border-[#e89519] shadow-[0_12px_30px_rgba(232,149,25,0.09)]"
                       : "border-[#dedede] hover:border-[#e89519] hover:shadow-[0_15px_35px_rgba(0,0,0,0.07)]"
                   }`}

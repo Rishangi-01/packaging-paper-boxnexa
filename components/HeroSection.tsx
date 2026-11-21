@@ -23,7 +23,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="#home" className="relative isolate min-h-[650px] w-full overflow-hidden bg-[#25282c] sm:min-h-[720px] lg:min-h-[calc(100vh-112px)]">
+    <section id="home" className="relative isolate min-h-[650px] w-full overflow-hidden bg-[#25282c] sm:min-h-[720px] lg:min-h-[calc(100vh-112px)]">
 
       
       <motion.div

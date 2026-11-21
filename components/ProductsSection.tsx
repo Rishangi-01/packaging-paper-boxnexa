@@ -51,7 +51,7 @@ export default function ProductsSection() {
   return (
     <section
       id="products"
-      className="relative overflow-hidden bg-white py-16 sm:py-20 lg:py-24"
+      className="relative overflow-hidden bg-white py-8 sm:py-12 lg:py-16"
     >
       <div className="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12 xl:px-16">
 
@@ -118,8 +118,7 @@ export default function ProductsSection() {
                 variants={cardVariants}
                 className="group h-full"
               >
-                <Link
-                  href={product.href}
+                <div
                   className="relative flex h-full flex-col overflow-hidden rounded-[11px] border border-[#dedede] bg-white transition-all duration-500 hover:-translate-y-2 hover:border-[#e89519] hover:shadow-[0_15px_35px_rgba(0,0,0,0.09)]"
                 >
 
@@ -137,10 +136,6 @@ export default function ProductsSection() {
                     {/* IMAGE HOVER OVERLAY */}
                     <div className="absolute inset-0 bg-[#e89519]/0 transition-colors duration-500 group-hover:bg-[#e89519]/[0.035]" />
 
-                    {/* TOP RIGHT ARROW */}
-                    <div className="absolute right-4 top-4 flex h-9 w-9 translate-y-2 items-center justify-center rounded-full bg-[#e89519] text-white opacity-0 shadow-lg transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-                      <ArrowUpRight size={19} />
-                    </div>
                   </div>
 
                   {/* PRODUCT DETAILS */}
@@ -167,7 +162,7 @@ export default function ProductsSection() {
                   {/* ORANGE BOTTOM BORDER */}
                   <div className="absolute bottom-0 left-0 h-[5px] w-full origin-left scale-x-100 bg-[#e89519] transition-all duration-500 group-hover:h-[7px]" />
 
-                </Link>
+                </div>
               </motion.div>
             );
           })}

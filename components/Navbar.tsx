@@ -1,48 +1,92 @@
-
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "motion/react";
-import {
-  ArrowRight,
-  Menu,
-  X,
-} from "lucide-react";
+import { ArrowRight, Menu, X } from "lucide-react";
 import Image from "next/image";
 import { headerData, standaloneSiteData } from "@/data";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const [activeHref, setActiveHref] = useState(
+    headerData.links.find((link) => link.active)?.href ||
+      headerData.links[0]?.href,
+  );
+
+  useEffect(() => {
+    const sections = headerData.links
+      .map((link) => {
+        const id = link.href.split("#")[1];
+        return id ? document.getElementById(id) : null;
+      })
+      .filter((section): section is HTMLElement => section !== null);
+
+    if (!sections.length) return;
+
+    const observer = new IntersectionObserver(
+  () => {
+    const activationPoint = window.innerHeight * 0.35;
+
+    const currentSection = [...sections]
+      .filter(
+        (section) =>
+          section.getBoundingClientRect().top <= activationPoint &&
+          section.getBoundingClientRect().bottom > activationPoint
+      )
+      .sort(
+        (a, b) =>
+          a.getBoundingClientRect().top -
+          b.getBoundingClientRect().top
+      )[0];
+
+    if (currentSection) {
+      setActiveHref(`#${currentSection.id}`);
+    }
+  },
+  {
+    rootMargin: "-20% 0px -65% 0px",
+    threshold: 0,
+  }
+);
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
+
+  // CLICK NAVIGATION
+  const handleNavClick = (href: string) => {
+    setActiveHref(href);
+    setIsOpen(false);
+  };
+
   return (
     <header className="sticky top-0 z-50 w-full bg-white">
-      <nav aria-label={headerData.ariaLabel} className="relative mx-auto flex min-h-[90px] w-full items-center justify-between px-5 py-2 shadow-[0_3px_18px_rgba(0,0,0,0.035)] sm:px-8 lg:min-h-[112px] lg:px-10 xl:px-12">
-
-        
+      <nav
+        aria-label={headerData.ariaLabel}
+        className="relative mx-auto flex min-h-[90px] w-full items-center justify-between px-5 py-2 shadow-[0_3px_18px_rgba(0,0,0,0.035)] sm:px-8 lg:min-h-[112px] lg:px-10 xl:px-12"
+      >
         <Link
-              href={standaloneSiteData.homeHref}
-              aria-label={`${standaloneSiteData.name} ${standaloneSiteData.homeLabel}`}
-              className="inline-flex"
-            >
-              <div
-                className="relative h-[100px] w-[250px] max-w-full sm:h-[95px] sm:w-[300px]"
-              >
-                <Image
-                  src={standaloneSiteData.logo}
-                  alt={standaloneSiteData.alt}
-                  fill
-                  sizes="(max-width: 640px) 300px, 380px"
-                  className="object-contain object-left"
-                  priority={false}
-                />
-              </div>
-            </Link>
+          href={standaloneSiteData.homeHref}
+          aria-label={`${standaloneSiteData.name} ${standaloneSiteData.homeLabel}`}
+          className="inline-flex"
+        >
+          <div className="relative h-[100px] w-[250px] max-w-full sm:h-[95px] sm:w-[300px]">
+            <Image
+              src={standaloneSiteData.logo}
+              alt={standaloneSiteData.alt}
+              fill
+              sizes="(max-width: 640px) 300px, 380px"
+              className="object-contain object-left"
+              priority={false}
+            />
+          </div>
+        </Link>
 
-        {/* DESKTOP DIVIDER */}
         <div className="mx-5 hidden h-[53px] w-[2px] shrink-0 bg-gray-200 xl:block" />
 
-        {/* DESKTOP NAVIGATION */}
         <div className="hidden flex-1 items-center justify-center gap-5 xl:flex 2xl:gap-9">
           {headerData.links.map((link, index) => (
             <motion.div
@@ -56,8 +100,10 @@ export default function Navbar() {
             >
               <Link
                 href={link.href}
+                onClick={() => handleNavClick(link.href)}
+                aria-current={activeHref === link.href ? "location" : undefined}
                 className={`group relative whitespace-nowrap py-3 text-[16px] font-semibold transition-colors duration-300 2xl:text-[18px] ${
-                  link.active
+                  activeHref === link.href
                     ? "text-[#d9840b]"
                     : "text-[#252a30] hover:text-[#d9840b]"
                 }`}
@@ -66,7 +112,7 @@ export default function Navbar() {
 
                 <span
                   className={`absolute -bottom-1 left-0 h-[3px] rounded-full bg-[#e89519] transition-all duration-300 ${
-                    link.active
+                    activeHref === link.href
                       ? "w-full"
                       : "w-0 group-hover:w-full"
                   }`}
@@ -76,7 +122,6 @@ export default function Navbar() {
           ))}
         </div>
 
-        
         <Link
           href={headerData.button.href}
           className="group relative hidden shrink-0 items-center gap-3 overflow-hidden bg-[#e89519] px-7 py-[15px] text-[17px] font-bold text-white transition-all duration-300 hover:bg-[#c8790c] hover:shadow-[0_8px_25px_rgba(232,149,25,0.3)] xl:flex 2xl:px-9"
@@ -94,10 +139,13 @@ export default function Navbar() {
           <span className="absolute inset-0 -translate-x-full bg-white/15 transition-transform duration-500 group-hover:translate-x-0" />
         </Link>
 
-        {/* MOBILE MENU BUTTON */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          aria-label={isOpen ? standaloneSiteData.mobileMenu.closeLabel : standaloneSiteData.mobileMenu.openLabel}
+          aria-label={
+            isOpen
+              ? standaloneSiteData.mobileMenu.closeLabel
+              : standaloneSiteData.mobileMenu.openLabel
+          }
           aria-expanded={isOpen}
           className="flex h-11 w-11 items-center justify-center rounded-md bg-[#e89519] text-white transition-all duration-300 hover:bg-[#c8790c] xl:hidden"
         >
@@ -115,7 +163,6 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* MOBILE NAVIGATION */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -138,9 +185,12 @@ export default function Navbar() {
                 >
                   <Link
                     href={link.href}
-                    onClick={() => setIsOpen(false)}
+                    onClick={() => handleNavClick(link.href)}
+                    aria-current={
+                      activeHref === link.href ? "location" : undefined
+                    }
                     className={`group flex items-center justify-between border-b border-gray-100 py-4 text-[15px] font-semibold transition-colors duration-300 ${
-                      link.active
+                      activeHref === link.href
                         ? "text-[#e89519]"
                         : "text-[#252a30] hover:text-[#e89519]"
                     }`}
@@ -155,7 +205,6 @@ export default function Navbar() {
                 </motion.div>
               ))}
 
-              {/* MOBILE CTA */}
               <Link
                 href={headerData.mobileButton.href}
                 onClick={() => setIsOpen(false)}

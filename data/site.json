@@ -949,7 +949,6 @@
             "name": "Corrugated Boxes",
             "homeTitle": "Corrugated Boxes",
             "icon": "box",
-            "href": "/products/corrugated-boxes",
             "description": "Durable and reliable corrugated boxes for safe and efficient shipping.",
             "image": "/images/corrugated-boxes.webp",
             "alt": "Corrugated Boxes at BOXNEXA",
@@ -959,7 +958,6 @@
             "name": "Kraft Paper Solutions",
             "homeTitle": "Kraft Paper",
             "icon": "scroll",
-            "href": "/products/kraft-paper",
             "description": "High-strength, eco-friendly kraft paper for versatile applications.",
             "image": "/images/kraft-paper.webp",
             "alt": "Kraft Paper Solutions at BOXNEXA",
@@ -969,7 +967,6 @@
             "name": "Paper Bags",
             "homeTitle": "Paper Bags",
             "icon": "shopping-bag",
-            "href": "/products/paper-bags",
             "description": "Strong, recyclable and brand-ready paper bags for retail and business.",
             "image": "/images/paper-bags.webp",
             "alt": "Paper Bags at BOXNEXA",
@@ -979,7 +976,6 @@
             "name": "Custom Packaging",
             "homeTitle": "Custom Packaging",
             "icon": "layers",
-            "href": "/products/custom-packaging",
             "description": "Tailored, high-quality packaging designed to fit your product perfectly.",
             "image": "/images/custom-packaging.webp",
             "alt": "Custom Packaging at BOXNEXA",
@@ -1099,11 +1095,6 @@
               {
                 "label": "Industry We Serve",
                 "href": "#industries",
-                "active": false
-              },
-              {
-                "label": "Testimonials",
-                "href": "#testimonials",
                 "active": false
               },
               {
@@ -1427,7 +1418,7 @@
                 "image": "/images/corrugated-packaging.webp",
                 "homeImage": "/images/corrugated-packaging.webp",
                 "treatmentImageAlt": "Corrugated packaging boxes",
-                "homeHref": "/services/corrugated-packaging",
+                "homeHref": "#contact",
                 "detailImage": "/images/corrugated-boxes.webp",
                 "relatedText": [
                   "Durable and reliable",
@@ -1457,7 +1448,7 @@
                 "image": "/images/kraft-paper-service.webp",
                 "homeImage": "/images/kraft-paper-service.webp",
                 "treatmentImageAlt": "Kraft paper solutions",
-                "homeHref": "/services/kraft-paper",
+                "homeHref": "#contact",
                 "thumb": "/images/kraft-paper.webp",
                 "relatedText": [
                   "High-strength,",
@@ -1487,7 +1478,7 @@
                 "image": "/images/paper-bags-service.webp",
                 "homeImage": "/images/paper-bags-service.webp",
                 "homeImageAlt": "Eco-friendly paper bags",
-                "homeHref": "/services/paper-bags",
+                "homeHref": "#contact",
                 "thumb": "/images/paper-bags.webp",
                 "relatedText": [
                   "Strong, recyclable",
@@ -1517,7 +1508,7 @@
                 "image": "/images/custom-packaging-service.webp",
                 "homeImage": "/images/custom-packaging-service.webp",
                 "homeImageAlt": "Custom packaging solutions",
-                "homeHref": "/services/custom-packaging",
+                "homeHref": "#contact",
                 "thumb": "/images/custom-packaging.webp",
                 "relatedText": [
                   "Tailored, high-quality",
@@ -2628,19 +2619,19 @@
                 "links": [
                   {
                     "label": "Corrugated Packaging",
-                    "href": "/services/corrugated-packaging"
+                    "href": "#contact"
                   },
                   {
                     "label": "Kraft Paper Solutions",
-                    "href": "/services/kraft-paper"
+                    "href": "#contact"
                   },
                   {
                     "label": "Paper Bags",
-                    "href": "/services/paper-bags"
+                    "href": "#contact"
                   },
                   {
                     "label": "Custom Packaging",
-                    "href": "/services/custom-packaging"
+                    "href": "#contact"
                   },
                   {
                     "label": "Corrugated Boxes",
@@ -2704,57 +2695,49 @@
                 "id": 1,
                 "title": "Retail &",
                 "subtitle": "E-Commerce",
-                "icon": "shopping-cart",
-                "href": "/industries/retail-ecommerce"
+                "icon": "shopping-cart"
               },
               {
                 "id": 2,
                 "title": "Food &",
                 "subtitle": "Beverage",
-                "icon": "concierge-bell",
-                "href": "/industries/food-beverage"
+                "icon": "concierge-bell"
               },
               {
                 "id": 3,
                 "title": "Pharmaceutical",
                 "subtitle": "& Healthcare",
-                "icon": "pill",
-                "href": "/industries/pharmaceutical-healthcare"
+                "icon": "pill"
               },
               {
                 "id": 4,
                 "title": "Automotive",
                 "subtitle": "& Engineering",
-                "icon": "car-front",
-                "href": "/industries/automotive-engineering"
+                "icon": "car-front"
               },
               {
                 "id": 5,
                 "title": "FMCG &",
                 "subtitle": "Consumer Goods",
-                "icon": "package",
-                "href": "/industries/fmcg-consumer-goods"
+                "icon": "package"
               },
               {
                 "id": 6,
                 "title": "Electronics",
                 "subtitle": "& Appliances",
-                "icon": "laptop",
-                "href": "/industries/electronics-appliances"
+                "icon": "laptop"
               },
               {
                 "id": 7,
                 "title": "Publishing",
                 "subtitle": "& Stationery",
-                "icon": "book-open",
-                "href": "/industries/publishing-stationery"
+                "icon": "book-open"
               },
               {
                 "id": 8,
                 "title": "Manufacturing",
                 "subtitle": "& Industrial",
-                "icon": "factory",
-                "href": "/industries/manufacturing-industrial"
+                "icon": "factory"
               }
             ]
           }
